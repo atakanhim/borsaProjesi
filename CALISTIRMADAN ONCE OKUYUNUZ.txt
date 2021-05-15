@@ -1,0 +1,4 @@
+!!! Programda Yollar farklı olacagı için çalışmıyabilir.
+örnegin benim databasein yolu : C:\Users\ataka\Desktop\borsaProjesi\database
+programı kendinizde denerken dikkat ediniz.
+
