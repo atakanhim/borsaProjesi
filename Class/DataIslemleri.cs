@@ -77,7 +77,7 @@ namespace borsaProjesi
             return toplamPara;
         }
         // para current user dan çekiliyor
-        public void paraCek(string urunsatici,int toplamfiyat)
+        public void paraCek(int toplamfiyat)
         {
            
             OleDbDataReader oku;
@@ -120,7 +120,7 @@ namespace borsaProjesi
                     sattigimmiktar = Convert.ToInt32(oku["UrunMiktari"].ToString());
                     miktar -= sattigimmiktar;
                     toplamPara += sattigimmiktar * Convert.ToInt32(oku["UrunFiyati"].ToString());
-                    paraCek(oku["UrunSatici"].ToString(), sattigimmiktar * Convert.ToInt32(oku["UrunFiyati"].ToString()));
+                    paraCek(sattigimmiktar * Convert.ToInt32(oku["UrunFiyati"].ToString()));
                     satinal(oku, sattigimmiktar);
 
                     mesaj += sattigimmiktar + " " + urunbirimi + " --> Birim fiyati :"+ Convert.ToInt32(oku["UrunFiyati"].ToString()) + " ₺ --> Toplam Fiyat :" +  (sattigimmiktar * Convert.ToInt32(oku["UrunFiyati"].ToString())).ToString() + " ₺ den alındı .\n";
@@ -130,7 +130,7 @@ namespace borsaProjesi
                     sattigimmiktar = miktar;
                     miktar -= sattigimmiktar;
                     toplamPara += sattigimmiktar * Convert.ToInt32(oku["UrunFiyati"].ToString());
-                    paraCek(oku["UrunSatici"].ToString(),sattigimmiktar * Convert.ToInt32(oku["UrunFiyati"].ToString()));
+                    paraCek(sattigimmiktar * Convert.ToInt32(oku["UrunFiyati"].ToString()));
                     satinal(oku, sattigimmiktar);
 
                     mesaj += sattigimmiktar + " " + urunbirimi + " --> Birim fiyati :" + Convert.ToInt32(oku["UrunFiyati"].ToString()) + " ₺ --> Toplam Fiyat :" + (sattigimmiktar * Convert.ToInt32(oku["UrunFiyati"].ToString())).ToString() + " ₺ den alındı .\n";
@@ -397,7 +397,7 @@ namespace borsaProjesi
         {
             // işlem 1 para hesaptan çekiliyor
             baglanti.Open();
-            paraCek(urunsatici,toplamfiyat);
+            paraCek(toplamfiyat);
             baglanti.Close();
 
 
