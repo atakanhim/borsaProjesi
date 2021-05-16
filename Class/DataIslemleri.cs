@@ -16,7 +16,7 @@ namespace borsaProjesi
         OleDbCommand komut;
         
         // **************************************************************---FONKSIYONLAR---**************************************************************
-        // form içindeki texboxları temizliyen mühendislik harikası kod
+        // form içindeki texboxları temizliyen mühendislik harikası kod.
         public void Temizle(Control ctr)
         {
             foreach (Control c in ctr.Controls)
@@ -113,7 +113,7 @@ namespace borsaProjesi
             while (oku.Read())
             {
                urunbirimi= oku["UrunBirimi"].ToString();
-                int sattigimmiktar = 0;
+                int sattigimmiktar;
 
                 if (Convert.ToInt32(oku["UrunMiktari"].ToString()) <= miktar && Convert.ToInt32(oku["UrunMiktari"].ToString())>0)
                 {
