@@ -30,12 +30,20 @@ namespace borsaProjesi
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.anasayfa_page = new System.Windows.Forms.TabPage();
             this.Siparislerim_btn = new System.Windows.Forms.Button();
+=======
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.anasayfa_page = new System.Windows.Forms.TabPage();
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.Anasayfa_Tarih = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -219,7 +227,10 @@ namespace borsaProjesi
             // 
             this.anasayfa_page.BackColor = System.Drawing.Color.Wheat;
             this.anasayfa_page.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+<<<<<<< HEAD
             this.anasayfa_page.Controls.Add(this.Siparislerim_btn);
+=======
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.anasayfa_page.Controls.Add(this.Anasayfa_Tarih);
             this.anasayfa_page.Controls.Add(this.tabControl2);
             this.anasayfa_page.Controls.Add(this.uyelik_turu);
@@ -241,6 +252,7 @@ namespace borsaProjesi
             this.anasayfa_page.TabIndex = 0;
             this.anasayfa_page.Text = "Ana Sayfa";
             // 
+<<<<<<< HEAD
             // Siparislerim_btn
             // 
             this.Siparislerim_btn.Location = new System.Drawing.Point(412, 13);
@@ -250,12 +262,18 @@ namespace borsaProjesi
             this.Siparislerim_btn.Text = "Siparişlerim";
             this.Siparislerim_btn.UseVisualStyleBackColor = true;
             // 
+=======
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             // Anasayfa_Tarih
             // 
             this.Anasayfa_Tarih.AutoSize = true;
             this.Anasayfa_Tarih.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.Anasayfa_Tarih.Location = new System.Drawing.Point(1063, 99);
             this.Anasayfa_Tarih.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.Anasayfa_Tarih.Location = new System.Drawing.Point(1050, 3);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.Anasayfa_Tarih.Name = "Anasayfa_Tarih";
             this.Anasayfa_Tarih.Size = new System.Drawing.Size(82, 26);
             this.Anasayfa_Tarih.TabIndex = 47;
@@ -265,11 +283,19 @@ namespace borsaProjesi
             // 
             this.tabControl2.Controls.Add(this.tabPage1);
             this.tabControl2.Controls.Add(this.tabPage2);
+<<<<<<< HEAD
             this.tabControl2.Location = new System.Drawing.Point(4, 128);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(1390, 556);
+=======
+            this.tabControl2.Location = new System.Drawing.Point(3, 104);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(1262, 452);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.tabControl2.TabIndex = 46;
             // 
             // tabPage1
@@ -284,8 +310,13 @@ namespace borsaProjesi
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
+<<<<<<< HEAD
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Size = new System.Drawing.Size(1382, 528);
+=======
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Size = new System.Drawing.Size(1254, 424);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Otomatik Satın Al";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -323,11 +354,19 @@ namespace borsaProjesi
             this.satinalgrpbox.Controls.Add(this.label34);
             this.satinalgrpbox.Controls.Add(this.adet_lbl);
             this.satinalgrpbox.Controls.Add(this.label33);
+<<<<<<< HEAD
             this.satinalgrpbox.Location = new System.Drawing.Point(226, 18);
             this.satinalgrpbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.satinalgrpbox.Name = "satinalgrpbox";
             this.satinalgrpbox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.satinalgrpbox.Size = new System.Drawing.Size(1150, 336);
+=======
+            this.satinalgrpbox.Location = new System.Drawing.Point(234, 32);
+            this.satinalgrpbox.Margin = new System.Windows.Forms.Padding(2);
+            this.satinalgrpbox.Name = "satinalgrpbox";
+            this.satinalgrpbox.Padding = new System.Windows.Forms.Padding(2);
+            this.satinalgrpbox.Size = new System.Drawing.Size(891, 314);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.satinalgrpbox.TabIndex = 6;
             this.satinalgrpbox.TabStop = false;
             // 
@@ -342,8 +381,13 @@ namespace borsaProjesi
             this.otosatinal_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.otosatinal_btn.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.otosatinal_btn.ForeColor = System.Drawing.SystemColors.Info;
+<<<<<<< HEAD
             this.otosatinal_btn.Location = new System.Drawing.Point(364, 220);
             this.otosatinal_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.otosatinal_btn.Location = new System.Drawing.Point(524, 231);
+            this.otosatinal_btn.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.otosatinal_btn.Name = "otosatinal_btn";
             this.otosatinal_btn.Size = new System.Drawing.Size(265, 97);
             this.otosatinal_btn.TabIndex = 4;
@@ -367,8 +411,13 @@ namespace borsaProjesi
             // kacadetalmak_txt
             // 
             this.kacadetalmak_txt.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.kacadetalmak_txt.Location = new System.Drawing.Point(81, 254);
             this.kacadetalmak_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.kacadetalmak_txt.Location = new System.Drawing.Point(78, 256);
+            this.kacadetalmak_txt.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.kacadetalmak_txt.Name = "kacadetalmak_txt";
             this.kacadetalmak_txt.Size = new System.Drawing.Size(219, 32);
             this.kacadetalmak_txt.TabIndex = 2;
@@ -377,7 +426,12 @@ namespace borsaProjesi
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.label36.Location = new System.Drawing.Point(154, 215);
+=======
+            this.label36.Location = new System.Drawing.Point(128, 220);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(180, 24);
             this.label36.TabIndex = 1;
@@ -387,7 +441,12 @@ namespace borsaProjesi
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.label34.Location = new System.Drawing.Point(418, 16);
+=======
+            this.label34.Location = new System.Drawing.Point(312, 31);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(248, 33);
             this.label34.TabIndex = 1;
@@ -397,7 +456,12 @@ namespace borsaProjesi
             // 
             this.adet_lbl.AutoSize = true;
             this.adet_lbl.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.adet_lbl.Location = new System.Drawing.Point(98, 215);
+=======
+            this.adet_lbl.Location = new System.Drawing.Point(74, 220);
+            this.adet_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.adet_lbl.Name = "adet_lbl";
             this.adet_lbl.Size = new System.Drawing.Size(50, 24);
             this.adet_lbl.TabIndex = 1;
@@ -407,7 +471,12 @@ namespace borsaProjesi
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.label33.Location = new System.Drawing.Point(48, 215);
+=======
+            this.label33.Location = new System.Drawing.Point(26, 220);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(44, 24);
             this.label33.TabIndex = 1;
@@ -415,8 +484,13 @@ namespace borsaProjesi
             // 
             // hangiurunu_listele
             // 
+<<<<<<< HEAD
             this.hangiurunu_listele.Location = new System.Drawing.Point(32, 69);
             this.hangiurunu_listele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.hangiurunu_listele.Location = new System.Drawing.Point(49, 50);
+            this.hangiurunu_listele.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.hangiurunu_listele.Name = "hangiurunu_listele";
             this.hangiurunu_listele.Size = new System.Drawing.Size(181, 39);
             this.hangiurunu_listele.TabIndex = 5;
@@ -428,7 +502,12 @@ namespace borsaProjesi
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.label31.Location = new System.Drawing.Point(29, 39);
+=======
+            this.label31.Location = new System.Drawing.Point(22, 32);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(191, 16);
             this.label31.TabIndex = 1;
@@ -440,8 +519,13 @@ namespace borsaProjesi
             this.urunler_listbox.ItemHeight = 15;
             this.urunler_listbox.Items.AddRange(new object[] {
             "Items"});
+<<<<<<< HEAD
             this.urunler_listbox.Location = new System.Drawing.Point(32, 114);
             this.urunler_listbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.urunler_listbox.Location = new System.Drawing.Point(49, 87);
+            this.urunler_listbox.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.urunler_listbox.Name = "urunler_listbox";
             this.urunler_listbox.Size = new System.Drawing.Size(181, 304);
             this.urunler_listbox.TabIndex = 0;
@@ -480,8 +564,13 @@ namespace borsaProjesi
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
+<<<<<<< HEAD
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Size = new System.Drawing.Size(1675, 528);
+=======
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(1254, 424);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Seçerek Satın Al";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -489,8 +578,13 @@ namespace borsaProjesi
             // KendiSatislarim_CheckBox
             // 
             this.KendiSatislarim_CheckBox.AutoSize = true;
+<<<<<<< HEAD
             this.KendiSatislarim_CheckBox.Location = new System.Drawing.Point(1043, 26);
             this.KendiSatislarim_CheckBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.KendiSatislarim_CheckBox.Location = new System.Drawing.Point(782, 21);
+            this.KendiSatislarim_CheckBox.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.KendiSatislarim_CheckBox.Name = "KendiSatislarim_CheckBox";
             this.KendiSatislarim_CheckBox.Size = new System.Drawing.Size(158, 19);
             this.KendiSatislarim_CheckBox.TabIndex = 71;
@@ -741,6 +835,7 @@ namespace borsaProjesi
             this.Secereksatinal_datagrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.Secereksatinal_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Secereksatinal_datagrid.ColumnHeadersVisible = false;
+<<<<<<< HEAD
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -754,6 +849,21 @@ namespace borsaProjesi
             this.Secereksatinal_datagrid.Name = "Secereksatinal_datagrid";
             this.Secereksatinal_datagrid.ReadOnly = true;
             this.Secereksatinal_datagrid.Size = new System.Drawing.Size(1315, 327);
+=======
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Secereksatinal_datagrid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Secereksatinal_datagrid.Location = new System.Drawing.Point(4, 71);
+            this.Secereksatinal_datagrid.Margin = new System.Windows.Forms.Padding(2);
+            this.Secereksatinal_datagrid.Name = "Secereksatinal_datagrid";
+            this.Secereksatinal_datagrid.ReadOnly = true;
+            this.Secereksatinal_datagrid.Size = new System.Drawing.Size(986, 266);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.Secereksatinal_datagrid.TabIndex = 44;
             this.Secereksatinal_datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Secereksatinal_datagrid_CellClick);
             // 
@@ -837,8 +947,12 @@ namespace borsaProjesi
             this.uyelik_turu.AutoSize = true;
             this.uyelik_turu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.uyelik_turu.ForeColor = System.Drawing.Color.DarkBlue;
+<<<<<<< HEAD
             this.uyelik_turu.Location = new System.Drawing.Point(91, 72);
             this.uyelik_turu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.uyelik_turu.Location = new System.Drawing.Point(237, 61);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.uyelik_turu.Name = "uyelik_turu";
             this.uyelik_turu.Size = new System.Drawing.Size(17, 19);
             this.uyelik_turu.TabIndex = 45;
@@ -850,8 +964,12 @@ namespace borsaProjesi
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(91, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.label1.Location = new System.Drawing.Point(237, 26);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 19);
             this.label1.TabIndex = 45;
@@ -862,8 +980,12 @@ namespace borsaProjesi
             this.kadinimage.BackColor = System.Drawing.Color.Transparent;
             this.kadinimage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("kadinimage.BackgroundImage")));
             this.kadinimage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+<<<<<<< HEAD
             this.kadinimage.Location = new System.Drawing.Point(247, 8);
             this.kadinimage.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.kadinimage.Location = new System.Drawing.Point(354, 9);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.kadinimage.Name = "kadinimage";
             this.kadinimage.Size = new System.Drawing.Size(91, 87);
             this.kadinimage.TabIndex = 44;
@@ -874,8 +996,12 @@ namespace borsaProjesi
             this.erkekimage.BackColor = System.Drawing.Color.Transparent;
             this.erkekimage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("erkekimage.BackgroundImage")));
             this.erkekimage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+<<<<<<< HEAD
             this.erkekimage.Location = new System.Drawing.Point(247, 8);
             this.erkekimage.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.erkekimage.Location = new System.Drawing.Point(354, 9);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.erkekimage.Name = "erkekimage";
             this.erkekimage.Size = new System.Drawing.Size(91, 87);
             this.erkekimage.TabIndex = 44;
@@ -886,8 +1012,12 @@ namespace borsaProjesi
             this.geciciBakiye_label.AutoSize = true;
             this.geciciBakiye_label.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.geciciBakiye_label.ForeColor = System.Drawing.Color.CornflowerBlue;
+<<<<<<< HEAD
             this.geciciBakiye_label.Location = new System.Drawing.Point(1173, 33);
             this.geciciBakiye_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.geciciBakiye_label.Location = new System.Drawing.Point(880, 27);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.geciciBakiye_label.Name = "geciciBakiye_label";
             this.geciciBakiye_label.Size = new System.Drawing.Size(28, 18);
             this.geciciBakiye_label.TabIndex = 10;
@@ -898,8 +1028,12 @@ namespace borsaProjesi
             // 
             this.unonay_label.AutoSize = true;
             this.unonay_label.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.unonay_label.Location = new System.Drawing.Point(951, 31);
             this.unonay_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.unonay_label.Location = new System.Drawing.Point(713, 25);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.unonay_label.Name = "unonay_label";
             this.unonay_label.Size = new System.Drawing.Size(161, 18);
             this.unonay_label.TabIndex = 11;
@@ -911,8 +1045,12 @@ namespace borsaProjesi
             this.bakiye_label.AutoSize = true;
             this.bakiye_label.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bakiye_label.ForeColor = System.Drawing.Color.CornflowerBlue;
+<<<<<<< HEAD
             this.bakiye_label.Location = new System.Drawing.Point(1159, 11);
             this.bakiye_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.bakiye_label.Location = new System.Drawing.Point(869, 9);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.bakiye_label.Name = "bakiye_label";
             this.bakiye_label.Size = new System.Drawing.Size(48, 18);
             this.bakiye_label.TabIndex = 12;
@@ -922,8 +1060,12 @@ namespace borsaProjesi
             // 
             this.titlebakiye_label.AutoSize = true;
             this.titlebakiye_label.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.titlebakiye_label.Location = new System.Drawing.Point(1084, 11);
             this.titlebakiye_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.titlebakiye_label.Location = new System.Drawing.Point(813, 9);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.titlebakiye_label.Name = "titlebakiye_label";
             this.titlebakiye_label.Size = new System.Drawing.Size(61, 18);
             this.titlebakiye_label.TabIndex = 13;
@@ -935,8 +1077,12 @@ namespace borsaProjesi
             // 
             this.main_soyad.AutoSize = true;
             this.main_soyad.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.main_soyad.Location = new System.Drawing.Point(315, 99);
             this.main_soyad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.main_soyad.Location = new System.Drawing.Point(405, 83);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.main_soyad.Name = "main_soyad";
             this.main_soyad.Size = new System.Drawing.Size(84, 18);
             this.main_soyad.TabIndex = 14;
@@ -946,8 +1092,12 @@ namespace borsaProjesi
             // 
             this.main_ad.AutoSize = true;
             this.main_ad.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.main_ad.Location = new System.Drawing.Point(243, 99);
             this.main_ad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.main_ad.Location = new System.Drawing.Point(351, 83);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.main_ad.Name = "main_ad";
             this.main_ad.Size = new System.Drawing.Size(48, 18);
             this.main_ad.TabIndex = 17;
@@ -977,8 +1127,12 @@ namespace borsaProjesi
             // 
             this.Profil_Tarih.AutoSize = true;
             this.Profil_Tarih.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.Profil_Tarih.Location = new System.Drawing.Point(1401, 4);
             this.Profil_Tarih.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.Profil_Tarih.Location = new System.Drawing.Point(1051, 3);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.Profil_Tarih.Name = "Profil_Tarih";
             this.Profil_Tarih.Size = new System.Drawing.Size(82, 26);
             this.Profil_Tarih.TabIndex = 42;
@@ -1030,8 +1184,12 @@ namespace borsaProjesi
             this.profil_groupbox.Controls.Add(this.userpass_label);
             this.profil_groupbox.Controls.Add(this.adsaad);
             this.profil_groupbox.Controls.Add(this.sss);
+<<<<<<< HEAD
             this.profil_groupbox.Location = new System.Drawing.Point(301, 305);
             this.profil_groupbox.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.profil_groupbox.Location = new System.Drawing.Point(226, 248);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.profil_groupbox.Name = "profil_groupbox";
             this.profil_groupbox.Padding = new System.Windows.Forms.Padding(4);
             this.profil_groupbox.Size = new System.Drawing.Size(808, 354);
@@ -1275,19 +1433,29 @@ namespace borsaProjesi
             this.bakiye_grpbox.Controls.Add(this.bakiye_ekle_btn);
             this.bakiye_grpbox.Controls.Add(this.bakiyeekle_ext);
             this.bakiye_grpbox.Controls.Add(this.bakiye_ekle_lbl);
+<<<<<<< HEAD
             this.bakiye_grpbox.Location = new System.Drawing.Point(1131, 305);
             this.bakiye_grpbox.Margin = new System.Windows.Forms.Padding(4);
             this.bakiye_grpbox.Name = "bakiye_grpbox";
             this.bakiye_grpbox.Padding = new System.Windows.Forms.Padding(4);
             this.bakiye_grpbox.Size = new System.Drawing.Size(531, 354);
+=======
+            this.bakiye_grpbox.Location = new System.Drawing.Point(848, 248);
+            this.bakiye_grpbox.Name = "bakiye_grpbox";
+            this.bakiye_grpbox.Size = new System.Drawing.Size(398, 288);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.bakiye_grpbox.TabIndex = 39;
             this.bakiye_grpbox.TabStop = false;
             // 
             // Parabirimi_label
             // 
             this.Parabirimi_label.AutoSize = true;
+<<<<<<< HEAD
             this.Parabirimi_label.Location = new System.Drawing.Point(264, 167);
             this.Parabirimi_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.Parabirimi_label.Location = new System.Drawing.Point(198, 136);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.Parabirimi_label.Name = "Parabirimi_label";
             this.Parabirimi_label.Size = new System.Drawing.Size(67, 15);
             this.Parabirimi_label.TabIndex = 30;
@@ -1297,17 +1465,27 @@ namespace borsaProjesi
             // 
             this.Parabirimleri_combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Parabirimleri_combo.FormattingEnabled = true;
+<<<<<<< HEAD
             this.Parabirimleri_combo.Location = new System.Drawing.Point(361, 164);
             this.Parabirimleri_combo.Margin = new System.Windows.Forms.Padding(4);
             this.Parabirimleri_combo.Name = "Parabirimleri_combo";
             this.Parabirimleri_combo.Size = new System.Drawing.Size(160, 23);
+=======
+            this.Parabirimleri_combo.Location = new System.Drawing.Point(271, 133);
+            this.Parabirimleri_combo.Name = "Parabirimleri_combo";
+            this.Parabirimleri_combo.Size = new System.Drawing.Size(121, 23);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.Parabirimleri_combo.TabIndex = 29;
             // 
             // gecicibakiye2label_txt
             // 
             this.gecicibakiye2label_txt.AutoSize = true;
+<<<<<<< HEAD
             this.gecicibakiye2label_txt.Location = new System.Drawing.Point(172, 142);
             this.gecicibakiye2label_txt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.gecicibakiye2label_txt.Location = new System.Drawing.Point(129, 115);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.gecicibakiye2label_txt.Name = "gecicibakiye2label_txt";
             this.gecicibakiye2label_txt.Size = new System.Drawing.Size(13, 15);
             this.gecicibakiye2label_txt.TabIndex = 28;
@@ -1316,8 +1494,12 @@ namespace borsaProjesi
             // bakiyelabel2_txt
             // 
             this.bakiyelabel2_txt.AutoSize = true;
+<<<<<<< HEAD
             this.bakiyelabel2_txt.Location = new System.Drawing.Point(172, 92);
             this.bakiyelabel2_txt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.bakiyelabel2_txt.Location = new System.Drawing.Point(129, 75);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.bakiyelabel2_txt.Name = "bakiyelabel2_txt";
             this.bakiyelabel2_txt.Size = new System.Drawing.Size(13, 15);
             this.bakiyelabel2_txt.TabIndex = 28;
@@ -1326,8 +1508,12 @@ namespace borsaProjesi
             // onaylanmamisbakiye_label
             // 
             this.onaylanmamisbakiye_label.AutoSize = true;
+<<<<<<< HEAD
             this.onaylanmamisbakiye_label.Location = new System.Drawing.Point(1, 142);
             this.onaylanmamisbakiye_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.onaylanmamisbakiye_label.Location = new System.Drawing.Point(1, 115);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.onaylanmamisbakiye_label.Name = "onaylanmamisbakiye_label";
             this.onaylanmamisbakiye_label.Size = new System.Drawing.Size(122, 15);
             this.onaylanmamisbakiye_label.TabIndex = 28;
@@ -1336,8 +1522,12 @@ namespace borsaProjesi
             // hesapbakiye_label
             // 
             this.hesapbakiye_label.AutoSize = true;
+<<<<<<< HEAD
             this.hesapbakiye_label.Location = new System.Drawing.Point(56, 92);
             this.hesapbakiye_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.hesapbakiye_label.Location = new System.Drawing.Point(42, 75);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.hesapbakiye_label.Name = "hesapbakiye_label";
             this.hesapbakiye_label.Size = new System.Drawing.Size(81, 15);
             this.hesapbakiye_label.TabIndex = 28;
@@ -1355,10 +1545,16 @@ namespace borsaProjesi
             this.bakiye_ekle_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bakiye_ekle_btn.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bakiye_ekle_btn.ForeColor = System.Drawing.SystemColors.Info;
+<<<<<<< HEAD
             this.bakiye_ekle_btn.Location = new System.Drawing.Point(268, 228);
             this.bakiye_ekle_btn.Margin = new System.Windows.Forms.Padding(4);
             this.bakiye_ekle_btn.Name = "bakiye_ekle_btn";
             this.bakiye_ekle_btn.Size = new System.Drawing.Size(255, 63);
+=======
+            this.bakiye_ekle_btn.Location = new System.Drawing.Point(201, 185);
+            this.bakiye_ekle_btn.Name = "bakiye_ekle_btn";
+            this.bakiye_ekle_btn.Size = new System.Drawing.Size(191, 51);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.bakiye_ekle_btn.TabIndex = 27;
             this.bakiye_ekle_btn.Text = "Bakiye Ekle";
             this.bakiye_ekle_btn.UseVisualStyleBackColor = false;
@@ -1366,18 +1562,28 @@ namespace borsaProjesi
             // 
             // bakiyeekle_ext
             // 
+<<<<<<< HEAD
             this.bakiyeekle_ext.Location = new System.Drawing.Point(268, 203);
             this.bakiyeekle_ext.Margin = new System.Windows.Forms.Padding(4);
             this.bakiyeekle_ext.Name = "bakiyeekle_ext";
             this.bakiyeekle_ext.Size = new System.Drawing.Size(253, 21);
+=======
+            this.bakiyeekle_ext.Location = new System.Drawing.Point(201, 165);
+            this.bakiyeekle_ext.Name = "bakiyeekle_ext";
+            this.bakiyeekle_ext.Size = new System.Drawing.Size(191, 21);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.bakiyeekle_ext.TabIndex = 26;
             // 
             // bakiye_ekle_lbl
             // 
             this.bakiye_ekle_lbl.AutoSize = true;
             this.bakiye_ekle_lbl.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+<<<<<<< HEAD
             this.bakiye_ekle_lbl.Location = new System.Drawing.Point(153, 21);
             this.bakiye_ekle_lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+=======
+            this.bakiye_ekle_lbl.Location = new System.Drawing.Point(115, 17);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.bakiye_ekle_lbl.Name = "bakiye_ekle_lbl";
             this.bakiye_ekle_lbl.Size = new System.Drawing.Size(190, 31);
             this.bakiye_ekle_lbl.TabIndex = 25;
@@ -1390,12 +1596,20 @@ namespace borsaProjesi
             this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox4.ForeColor = System.Drawing.Color.DarkBlue;
+<<<<<<< HEAD
             this.textBox4.Location = new System.Drawing.Point(559, 7);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(551, 71);
+=======
+            this.textBox4.Location = new System.Drawing.Point(419, 6);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(413, 58);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.textBox4.TabIndex = 38;
             this.textBox4.Text = "~Profil Bilgilerim~";
             // 
@@ -1663,6 +1877,7 @@ namespace borsaProjesi
             this.Urunekle_datagrid.AllowUserToOrderColumns = true;
             this.Urunekle_datagrid.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.Urunekle_datagrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+<<<<<<< HEAD
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -1684,6 +1899,28 @@ namespace borsaProjesi
             this.Urunekle_datagrid.DefaultCellStyle = dataGridViewCellStyle12;
             this.Urunekle_datagrid.Location = new System.Drawing.Point(3, 161);
             this.Urunekle_datagrid.Margin = new System.Windows.Forms.Padding(4);
+=======
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Urunekle_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.Urunekle_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Urunekle_datagrid.ColumnHeadersVisible = false;
+            this.Urunekle_datagrid.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Urunekle_datagrid.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Urunekle_datagrid.Location = new System.Drawing.Point(2, 131);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.Urunekle_datagrid.Name = "Urunekle_datagrid";
             this.Urunekle_datagrid.ReadOnly = true;
             this.Urunekle_datagrid.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1692,7 +1929,11 @@ namespace borsaProjesi
             this.Urunekle_datagrid.ShowCellToolTips = false;
             this.Urunekle_datagrid.ShowEditingIcon = false;
             this.Urunekle_datagrid.ShowRowErrors = false;
+<<<<<<< HEAD
             this.Urunekle_datagrid.Size = new System.Drawing.Size(1269, 300);
+=======
+            this.Urunekle_datagrid.Size = new System.Drawing.Size(952, 244);
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             this.Urunekle_datagrid.TabIndex = 70;
             this.Urunekle_datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Urunekle_datagrid_CellClick);
             // 
@@ -2087,6 +2328,7 @@ namespace borsaProjesi
             this.cikis_btn.TabIndex = 0;
             this.cikis_btn.UseVisualStyleBackColor = false;
             this.cikis_btn.Click += new System.EventHandler(this.Cikis_btn_Click);
+<<<<<<< HEAD
             // 
             // tekfiyat_bottom_label
             // 
@@ -2099,6 +2341,8 @@ namespace borsaProjesi
             this.tekfiyat_bottom_label.TabIndex = 49;
             this.tekfiyat_bottom_label.Text = "İstediğiniz fiyattan sipariş verin o fiyattan konuldugunda hemen alın";
             this.tekfiyat_bottom_label.Visible = false;
+=======
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             // 
             // MainScreen
             // 
@@ -2292,9 +2536,12 @@ namespace borsaProjesi
         private System.Windows.Forms.Label Anasayfa_Tarih;
         private System.Windows.Forms.ComboBox Parabirimleri_combo;
         private System.Windows.Forms.Label Parabirimi_label;
+<<<<<<< HEAD
         private System.Windows.Forms.Button SiparisVer_btn;
         private System.Windows.Forms.Button Siparislerim_btn;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label tekfiyat_bottom_label;
+=======
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
     }
 }

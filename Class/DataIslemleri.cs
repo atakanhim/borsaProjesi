@@ -31,6 +31,7 @@ namespace borsaProjesi
         private void OpenConnection() => baglanti.Open();// baglantıyı açtırdık
         private void CloseConnection() => baglanti.Close();// bırdada kapattırıyoruz  2 side tek satır ama böylesi daha iyi
         private OleDbDataReader ReadDatabase(string sorgu)// executeReader işlemi burda
+<<<<<<< HEAD
         {
             OleDbDataReader ReadData;
             komut = new OleDbCommand(sorgu, baglanti);
@@ -119,6 +120,24 @@ namespace borsaProjesi
         //toplam aded çekiliyor
         public int GetUrunToplamAdet(string urunname)
         {
+=======
+        {
+            OleDbDataReader ReadData;
+            komut = new OleDbCommand(sorgu, baglanti);
+            ReadData = komut.ExecuteReader();
+            return ReadData;
+        }
+        private string AddOrUpdateDatabase(string sorgu)// ExecuteNonquery işlemi burda
+        {
+            komut = new OleDbCommand(sorgu, baglanti);
+            komut.ExecuteNonQuery();
+            return "İşlemi Başarılı";
+        }
+
+        //toplam aded çekiliyor
+        public int GetUrunToplamAdet(string urunname)
+        {
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
             int toplamurun = 0;
             OleDbDataReader ReadData;
             OpenConnection();

@@ -343,6 +343,11 @@ namespace borsaProjesi
             }
             ListeleComboBoxControl();
         }
+<<<<<<< HEAD
+=======
+
+        // Timer Kayan Yazı
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
        
         // Bool Sayimi 
         static bool SayiMi(string deger)
@@ -432,6 +437,7 @@ namespace borsaProjesi
             g_urunturu.Text = Urunekle_datagrid.Rows[e.RowIndex].Cells["UrunTuru"].FormattedValue.ToString();
             g_urunbarkod.Text = Urunekle_datagrid.Rows[e.RowIndex].Cells["urunBarkodNo"].FormattedValue.ToString();
         }
+<<<<<<< HEAD
 
         private void SiparisVer_btn_MouseHover(object sender, EventArgs e) => tekfiyat_bottom_label.Visible = true;
 
@@ -442,5 +448,7 @@ namespace borsaProjesi
 
             Singleton.Instance.ChangeScreen(this, Singleton.Instance.siparisVer);
         }
+=======
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
     }
 }

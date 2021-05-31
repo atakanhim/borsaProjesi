@@ -69,4 +69,7 @@ C:\Users\ataka\source\repos\Borsa_ProjesiRework\bin\Debug\borsaProjesi.exe
 C:\Users\ataka\source\repos\Borsa_ProjesiRework\bin\Debug\borsaProjesi.pdb
 C:\Users\ataka\source\repos\Borsa_ProjesiRework\obj\Debug\borsaProjesi.Properties.Resources.resources
 C:\Users\ataka\source\repos\Borsa_ProjesiRework\obj\Debug\borsaProjesi.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
 C:\Users\ataka\source\repos\Borsa_ProjesiRework\obj\Debug\borsaProjesi.FormScreens.SiparisVer.resources
+=======
+>>>>>>> 8458d3d7ee328001c1f4cb53aaf9188d7262e43d
