@@ -66,6 +66,12 @@
     <Compile Include="FormScreens\GirisControl.Designer.cs">
       <DependentUpon>GirisControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormScreens\SiparisVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScreens\SiparisVer.Designer.cs">
+      <DependentUpon>SiparisVer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,6 +113,9 @@
     <EmbeddedResource Include="FormScreens\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormScreens\SiparisVer.resx">
+      <DependentUpon>SiparisVer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -127,6 +136,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\adminloginpng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\userloginscrean.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bussiness-man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\backgorund1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\add-user %282%29.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

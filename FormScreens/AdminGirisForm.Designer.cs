@@ -51,7 +51,7 @@ namespace borsaProjesi
             this.geri_btn.Size = new System.Drawing.Size(58, 52);
             this.geri_btn.TabIndex = 0;
             this.geri_btn.UseVisualStyleBackColor = false;
-            this.geri_btn.Click += new System.EventHandler(this.geri_btn_Click);
+            this.geri_btn.Click += new System.EventHandler(this.Geri_btn_Click);
             // 
             // giris_btn
             // 
@@ -69,7 +69,7 @@ namespace borsaProjesi
             this.giris_btn.TabIndex = 1;
             this.giris_btn.Tag = "";
             this.giris_btn.UseVisualStyleBackColor = false;
-            this.giris_btn.Click += new System.EventHandler(this.giris_btn_Click);
+            this.giris_btn.Click += new System.EventHandler(this.Giris_btn_Click);
             // 
             // username_admin
             // 

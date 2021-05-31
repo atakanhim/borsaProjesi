@@ -1,8 +1,10 @@
-﻿using System;
+﻿using borsaProjesi.FormScreens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace borsaProjesi
 {
@@ -23,6 +25,13 @@ namespace borsaProjesi
                 return instance;
             }
         }
+        public void ExitTheApplication() => Application.Exit();// uygullamayı sonlandırıyopr
+        public void ChangeScreen(Form hide, Form show)// ekran degistiriyor
+        {
+            hide.Hide();
+            show.Show();
+           
+        }
         // Classlar
         public CurrentUser currentUser = new CurrentUser();
         public DataIslemleri islem = new DataIslemleri();
@@ -35,6 +44,7 @@ namespace borsaProjesi
         public AdminGirisForm admingiris = new AdminGirisForm();
         public AdminForm adminForm = new AdminForm();
         public GirisControl girisctr = new GirisControl();
+        public SiparisVer siparisVer = new SiparisVer();
 
     }
 }

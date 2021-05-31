@@ -17,21 +17,10 @@ namespace borsaProjesi
             InitializeComponent();
         }
 
-        private void exit_btn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        private void Exit_btn_Click(object sender, EventArgs e) => Singleton.Instance.ExitTheApplication();
 
-        private void admin_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Singleton.Instance.admingiris.Show();
-        }
+        private void Admin_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this,Singleton.Instance.admingiris);
+        private void User_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.login);
 
-        private void user_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Singleton.Instance.login.Show();
-        }
     }
 }

@@ -20,27 +20,11 @@ namespace borsaProjesi
             InitializeComponent();
         }
 
-        private void Giris_yap_btn_Click(object sender, EventArgs e)
-        {
-            Singleton.Instance.islem.KullaniciGirisi(kadi_txt, password_txt, this);
-        }
-  
+        private void Giris_yap_btn_Click(object sender, EventArgs e) => Singleton.Instance.islem.KullaniciGirisi(kadi_txt, password_txt, this);
 
-        private void sign_up_btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Singleton.Instance.signUp.Show();
-
-        }
-        private void geri_btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Singleton.Instance.girisctr.Show();
-        }
-
-        public void temizle()
-        {
-            Singleton.Instance.islem.Temizle(this);
-        }
+        private void Sign_up_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.signUp);
+        private void Geri_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.girisctr);
+        public void LoginArayüzTemizle() => Singleton.Instance.islem.Temizle(this);
+        private void Login_Load(object sender, EventArgs e) => LoginArayüzTemizle();
     }
 }
