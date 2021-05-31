@@ -72,7 +72,7 @@ namespace borsaProjesi
             this.cikis_btn.Size = new System.Drawing.Size(58, 52);
             this.cikis_btn.TabIndex = 3;
             this.cikis_btn.UseVisualStyleBackColor = false;
-            this.cikis_btn.Click += new System.EventHandler(this.cikis_btn_Click);
+            this.cikis_btn.Click += new System.EventHandler(this.Cikis_btn_Click);
             // 
             // groupBox2
             // 
@@ -325,7 +325,7 @@ namespace borsaProjesi
             this.kullanici_ekle_btn.Text = "SIGN UP";
             this.kullanici_ekle_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.kullanici_ekle_btn.UseVisualStyleBackColor = false;
-            this.kullanici_ekle_btn.Click += new System.EventHandler(this.kullanici_ekle_btn_Click);
+            this.kullanici_ekle_btn.Click += new System.EventHandler(this.Kullanici_ekle_btn_Click);
             // 
             // SignUp
             // 

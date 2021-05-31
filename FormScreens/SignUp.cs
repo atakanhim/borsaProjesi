@@ -18,15 +18,15 @@ namespace borsaProjesi
             InitializeComponent();
         }
 
-        private void kullanici_ekle_btn_Click(object sender, EventArgs e)
+        private void Kullanici_ekle_btn_Click(object sender, EventArgs e)
         {
             string cinsiyet = "";
 
             if (username_txt.Text == "" || password_txt.Text == "" || adres_txt.Text == "" || ad_txt.Text == "" || soyad_txt.Text == "" || tc_txt.Text == "" || telefon_txt.Text == "" || adres_txt.Text == "" || email_txt.Text == "")
                 MessageBox.Show("Lütfen Tüm Alanları Doldurun");
-            else if (sayiMi(tc_txt.Text) == false)
+            else if (SayiMi(tc_txt.Text) == false)
                 MessageBox.Show("Lütfen Geçerli Tc No Giriniz");
-            else if (sayiMi(telefon_txt.Text) == false)
+            else if (SayiMi(telefon_txt.Text) == false)
                 MessageBox.Show("Lütfen Geçerli Telefon Numarası giriniz");
             else if (password_txt.Text == passagain_txt.Text)
             {
@@ -41,7 +41,7 @@ namespace borsaProjesi
                 MessageBox.Show("Şifreler uyuşmuyor", "Hata");
         }
 
-        private void cikis_btn_Click(object sender, EventArgs e)
+        private void Cikis_btn_Click(object sender, EventArgs e)
         {
 
             this.Hide();
@@ -49,7 +49,7 @@ namespace borsaProjesi
 
 
         }
-        static bool sayiMi(string deger)
+        static bool SayiMi(string deger)
         {
             try
             {

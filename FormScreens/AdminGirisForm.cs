@@ -17,17 +17,11 @@ namespace borsaProjesi
             InitializeComponent();
         }
 
-        private void geri_btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Singleton.Instance.girisctr.Show();
-        }
+        private void Geri_btn_Click(object sender, EventArgs e)=>Singleton.Instance.ChangeScreen(this, Singleton.Instance.girisctr);
 
-        private void giris_btn_Click(object sender, EventArgs e)
-        {
-            Singleton.Instance.islem.AdminGirisi(username_admin,password_admin,this);
-           
-        }
-       
+
+
+        private void Giris_btn_Click(object sender, EventArgs e) => Singleton.Instance.islem.AdminGirisi(username_admin, password_admin, this);
+
     }
 }

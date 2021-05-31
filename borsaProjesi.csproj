@@ -128,6 +128,30 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="images\adminloginpng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\userloginscrean.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bussiness-man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\backgorund1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\add-user %282%29.png" />
+  </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

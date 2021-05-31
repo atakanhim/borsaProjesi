@@ -13,8 +13,6 @@ namespace borsaProjesi
 {
     public partial class AdminForm : Form
     {
-        OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\ataka\\Desktop\\borsaProjesi\\database\\borsadatabase.accdb");
-
         private string sorgu = "";
         public AdminForm()
         {
@@ -23,41 +21,65 @@ namespace borsaProjesi
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.ColumnHeadersVisible = false;
-            dataGridView1.ReadOnly = true;
-            dataGridView2.ColumnHeadersVisible = false;
-            dataGridView2.ReadOnly = true;
-            secenekler_combobox.Text = "Tüm Kullanıcılar";
-            urunler_combobox.Text = "Tüm Ürünler";
+            Kullanicilar_datagridview.ColumnHeadersVisible = false;
+            Kullanicilar_datagridview.ReadOnly = true;
+            Urunler_datagridview.ColumnHeadersVisible = false;
+            Urunler_datagridview.ReadOnly = true;
+            AdminFormOnLoad();
+        }
+        public void AdminFormOnLoad()
+        {
+            Kullanicikontrol_tarih_label.Text = "Tarih : " + DateTime.Parse(DateTime.Now.ToShortDateString()).ToShortDateString();// tarih anasayfa
+            Tarihurunkontrol_label.Text = "Tarih : " + DateTime.Parse(DateTime.Now.ToShortDateString()).ToShortDateString();// tarih profilim
+
+            SeceneklercomboDoldur();
+            UrunlerComboDoldur();    
+        }
+        private void SeceneklercomboDoldur()
+        {
+            secenekler_combobox.Items.Clear();
+            secenekler_combobox.Text="Tüm Kullanıcılar";
+            secenekler_combobox.Items.Add("Tüm Kullanıcılar");
+            secenekler_combobox.Items.Add("Onay Bekleyen Bakiyeler");
+
             sorgu = "SELECT * FROM Sorgu2 ";
-            dataGridView1.DataSource = Singleton.Instance.islem.showdatabases(sorgu, baglanti);
+            Kullanicilar_datagridview.DataSource = Singleton.Instance.islem.Showdatabases(sorgu);
+        }
+        private void UrunlerComboDoldur()
+        {    
+            urunler_combobox.Items.Clear();
+            urunler_combobox.Text = "Tüm Ürünler";
+            urunler_combobox.Items.Add("Tüm Ürünler");
+            urunler_combobox.Items.Add("Onaylanan Ürünler");
+            urunler_combobox.Items.Add("Onay Bekleyen Ürünler");
+
             sorgu = "SELECT * FROM showUruns ";
-            dataGridView2.DataSource = Singleton.Instance.islem.showdatabases(sorgu, baglanti);
+            Urunler_datagridview.DataSource = Singleton.Instance.islem.Showdatabases(sorgu);
         }
-
-
-
-        private void search_btn_Click(object sender, EventArgs e)
+        private void Search_btn_Click(object sender, EventArgs e)
         {
-            listele();
+            Listele();
         }
-        private void listele()
+        private void Listele()
         {
-            clearTxts();
+            ClearTxts();
+         
             baslik_label.Text = secenekler_combobox.Text;
             if (secenekler_combobox.Text == "Onay Bekleyen Bakiyeler")
                 sorgu = "SELECT * FROM Sorgu2 WHERE bakiyeOnay='" + "Onaylanmadı" + "'";
-            if (secenekler_combobox.Text == "Tüm Kullanıcılar")
-                sorgu = "SELECT * FROM Sorgu2 ";
-            dataGridView1.DataSource = Singleton.Instance.islem.showdatabases(sorgu, baglanti);
+            if (secenekler_combobox.Text == "Tüm Kullanıcılar" || secenekler_combobox.Text=="")
+               sorgu = "SELECT * FROM Sorgu2 ";
+           
+            Kullanicilar_datagridview.DataSource = Singleton.Instance.islem.Showdatabases(sorgu);
         }
      
 
-        private void onayla_btn_Click(object sender, EventArgs e)
+        private void Onayla_btn_Click(object sender, EventArgs e)
         {
-            if (bakiyeonay_label.Text == "Onaylanmadı")
+            if (bakiyeonay_label.Text == "Onaylanmadı" && parabirimi_label.Text=="TL")
             {
                 DialogResult dialogResult = MessageBox.Show("Bakiyeyi Onaylamak istediğinize eminmisiniz ?", "Bakiye Onaylansın mı ?", MessageBoxButtons.YesNo);
+            
                 if (dialogResult == DialogResult.Yes)
                 {
                     //yes
@@ -66,34 +88,41 @@ namespace borsaProjesi
                     bakiye += artismiktari;
                     Singleton.Instance.islem.BakiyeOnay(username_txt.Text, bakiye);                  
                     MessageBox.Show("Bakiye onaylama işlemi tamamlandı.", "Bakiye Onay");
-                    listele();
+                    secenekler_combobox.Text = "Tüm Kullanıcılar";
+                    Listele();
                 }
             }
             else if (bakiyeonay_label.Text == "Onaylandı")
             {
-                MessageBox.Show("Seçtiğiniz kullanıcının bakiyesi zaten onaylanmış", "****");
+                MessageBox.Show("Seçtiğiniz kullanıcının bakiyesi zaten onaylanmış", "Zeten onaylanmış");
+            }
+            else if (parabirimi_label.Text != "TL")
+            {
+                MessageBox.Show("Lütfen ilk önce paranızı Türk Parasına Çeviriniz (TL)", "Para birimi hatası");
             }
             else
             {
-                MessageBox.Show("Lütfen bir kullanıcı seçiniz", "****");
+                MessageBox.Show("Lütfen bir kullanıcı seçiniz", "Kullanıcı seçilmedi");
             }
           
         }
 
       
-        public void clearTxts()
+        public void ClearTxts()
         {
             hesapbakiyelabel.Text = "";
             gecicibakiye_label.Text = "";
             bakiyeonay_label.Text = "";
             username_txt.Text = "";
+            parabirimi_label.Text = "";
+            ParaBirimiVisibleControl(false);
         }
 
-        private void urunlerlistele_btn_Click(object sender, EventArgs e)
+        private void Urunlerlistele_btn_Click(object sender, EventArgs e)
         {
-            uListele();        
+            UrunListele();
         }
-        private void uListele()
+        private void UrunListele()
         {
             urunkodu_lbl.Text = "";
             onaycontrol_label.Text = ""; 
@@ -105,71 +134,76 @@ namespace borsaProjesi
                 sorgu = "SELECT * FROM showUruns WHERE urunOnay='" + "Onaylandı" + "'";
             if (urunler_combobox.Text == "Onay Bekleyen Ürünler")
                 sorgu = "SELECT * FROM showUruns WHERE urunOnay='" + "Onaylanmadı" + "'";
-            dataGridView2.DataSource = Singleton.Instance.islem.showdatabases(sorgu, baglanti);
+            Urunler_datagridview.DataSource = Singleton.Instance.islem.Showdatabases(sorgu);
 
         }
-        private void urunonayla_btn_Click(object sender, EventArgs e)
+        private void Urunonayla_btn_Click(object sender, EventArgs e)
         {
             if (onaycontrol_label.Text == "Onaylanmadı")
             {
                 DialogResult dialogResult = MessageBox.Show("Urun Onaylamak istediğinize eminmisiniz ?", "Urun Onaylansın mı ?", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-          
+
                     Singleton.Instance.islem.UrunOnay(urunkodu_lbl.Text);
-                    uListele();
-                   
+                    UrunListele();
                     MessageBox.Show("Urun onaylama işlemi tamamlandı.", "Kullanıcı Onay");
                 }
-                else if (dialogResult == DialogResult.No)
-                {
-                    //no
-
-                }
+                else if (dialogResult == DialogResult.No) MessageBox.Show("Urun onaylama işlemi tamamlandı.", "Kullanıcı Onay");
             }
-            else if (onaycontrol_label.Text == "Onaylandı")
+            else if (onaycontrol_label.Text == "Onaylandı")MessageBox.Show("Seçtiğiniz kullanıcı zaten onaylanmış.", "****");         
+            else MessageBox.Show("Lütfen bir ürün  seçiniz.", "****");       
+        }
+
+        private void Btn_gerii_Click(object sender, EventArgs e)
+        {
+            Singleton.Instance.login.LoginArayüzTemizle();
+            Singleton.Instance.ChangeScreen(this, Singleton.Instance.girisctr);  
+        }
+
+        private void Kullanicilar_datagridview_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            Kullanicilar_datagridview.CurrentRow.Selected = true;
+            username_txt.Text = Kullanicilar_datagridview.Rows[e.RowIndex].Cells["UserName"].FormattedValue.ToString();
+            hesapbakiyelabel.Text = Kullanicilar_datagridview.Rows[e.RowIndex].Cells["hesapBakiye"].FormattedValue.ToString();
+           gecicibakiye_label.Text =  Kullanicilar_datagridview.Rows[e.RowIndex].Cells["geciciBakiye"].FormattedValue.ToString();
+            bakiyeonay_label.Text = Kullanicilar_datagridview.Rows[e.RowIndex].Cells["bakiyeOnay"].FormattedValue.ToString();  
+            parabirimi_label.Text = Kullanicilar_datagridview.Rows[e.RowIndex].Cells["yuklemekistedigiparabirimi"].FormattedValue.ToString();
+
+            if (Convert.ToInt32(Kullanicilar_datagridview.Rows[e.RowIndex].Cells["geciciBakiye"].FormattedValue.ToString()) > 0) ParaBirimiVisibleControl(true);
+            else ParaBirimiVisibleControl(false);
+
+
+
+
+        }
+        private void ParaBirimiVisibleControl(bool deger)
+        {
+            if (deger)
             {
-                MessageBox.Show("Seçtiğiniz kullanıcı zaten onaylanmış.", "****");
+                parabirimibaslik.Visible = true;
+                parabirimi_label.Visible = true;
+                exchange_rate_btn.Visible = true;
             }
             else
             {
-                MessageBox.Show("Lütfen bir ürün  seçiniz.", "****");
+                parabirimi_label.Visible = false;
+                parabirimibaslik.Visible = false;
+                exchange_rate_btn.Visible = false;
             }
         }
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Urunler_datagridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView2.CurrentRow.Selected = true;
-            onaycontrol_label.Text = dataGridView2.Rows[e.RowIndex].Cells["urunOnay"].FormattedValue.ToString();
-            urunkodu_lbl.Text = dataGridView2.Rows[e.RowIndex].Cells["urunBarkodNo"].FormattedValue.ToString();
-
-
+            Urunler_datagridview.CurrentRow.Selected = true;
+            onaycontrol_label.Text = Urunler_datagridview.Rows[e.RowIndex].Cells["urunOnay"].FormattedValue.ToString();
+            urunkodu_lbl.Text = Urunler_datagridview.Rows[e.RowIndex].Cells["urunBarkodNo"].FormattedValue.ToString();
         }
 
-    
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Exchange_rate_btn_Click(object sender, EventArgs e)
         {
-
-            dataGridView1.CurrentRow.Selected = true;
-            
-
-                username_txt.Text = dataGridView1.Rows[e.RowIndex].Cells["UserName"].FormattedValue.ToString();
-                hesapbakiyelabel.Text = dataGridView1.Rows[e.RowIndex].Cells["hesapBakiye"].FormattedValue.ToString();
-                gecicibakiye_label.Text = dataGridView1.Rows[e.RowIndex].Cells["geciciBakiye"].FormattedValue.ToString();         
-                bakiyeonay_label.Text = dataGridView1.Rows[e.RowIndex].Cells["bakiyeOnay"].FormattedValue.ToString();
-
-            
-
-
+            // burdan para dönüştürülcekkk o kadar
         }
-
-        private void btn_gerii_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Singleton.Instance.login.temizle();
-            Singleton.Instance.login.Show();
-        }
-
-        
     }
 }

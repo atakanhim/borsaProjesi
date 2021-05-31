@@ -16,26 +16,101 @@ namespace borsaProjesi
     {
       
         private string sorgu = "";
-        OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\ataka\\Desktop\\borsaProjesi\\database\\borsadatabase.accdb");
-
         public MainScreen()
         {
             InitializeComponent();    
         }
         private void MainScreen_Load(object sender, EventArgs e)
         {
+            MainScreenOnLoad();   
+        }
+        public void MainScreenOnLoad()
+        {
+            ParabirimiComboDoldur();
+            Anasayfa_Tarih.Text = "Tarih : " + DateTime.Parse(DateTime.Now.ToShortDateString()).ToShortDateString();// tarih anasayfa
+            Profil_Tarih.Text = "Tarih : " + DateTime.Parse(DateTime.Now.ToShortDateString()).ToShortDateString();// tarih profilim
+
             listeleCombo.Text = "Tüm Satışlarım";
-            checkBox1.Checked = true;
-            UpdateLabelTexts();
-            
+            KendiSatislarim_CheckBox.Checked = true;
+            if (Singleton.Instance.currentUser.Cinsiyet == "Kadın")
+            {
+                kadinimage.Visible = true;
+                kadinimage2.Visible = true;
+            }
+            else
+            {
+                kadinimage.Visible = false;
+                kadinimage2.Visible = false;
+            }
+            urunler_listbox.Items.Clear();
+            satinalgrpbox.Visible = false;
+            ButonVisibleControl();
+            GuncelProfil();
+        
+        }
+        private void ParabirimiComboDoldur()
+        {
+            Parabirimleri_combo.Items.Clear();
+            Parabirimleri_combo.Items.Add("TL");// Türk lirası
+            Parabirimleri_combo.Items.Add("USD");// ABD Doları
+            Parabirimleri_combo.Items.Add("EUR");//Euro
+            Parabirimleri_combo.Items.Add("CHF");// İsviçre frangı
+            Parabirimleri_combo.Items.Add("DKK"); // Danimarka kronu
+            Parabirimleri_combo.Items.Add("GBP");// İngiliz Strelini
+        }
+        public void GuncelProfil()
+        {
+            puserid_label.Text = Singleton.Instance.currentUser.UserID.ToString();
+            pusername_label.Text = Singleton.Instance.currentUser.UserName;
+            puserpass_txt.Text = Singleton.Instance.currentUser.UserPass;
+
+            profilad_label.Text = Singleton.Instance.currentUser.Ad;
+            psoyad_label.Text = Singleton.Instance.currentUser.SoyAd;
+            ptcno.Text = Singleton.Instance.currentUser.Tc.ToString();
+            ptelefonno_txt.Text = Singleton.Instance.currentUser.Telefon.ToString();
+            padres_txt.Text = Singleton.Instance.currentUser.Adres;
+            p_emailtxt.Text = Singleton.Instance.currentUser.Eposta;
+            p_unvan.Text = Singleton.Instance.currentUser.Unvan;
+            uyelik_turu.Text = Singleton.Instance.currentUser.Unvan;
+
+            //***********
+            main_ad.Text = Singleton.Instance.currentUser.Ad;
+            main_soyad.Text = Singleton.Instance.currentUser.SoyAd + "";
+            bakiye_label.Text = Singleton.Instance.currentUser.Bakiye + "₺";
+            geciciBakiye_label.Text = Singleton.Instance.currentUser.GeciciBakiye + "₺";
+            bakiyelabel2_txt.Text = Singleton.Instance.currentUser.Bakiye + "₺"; ;
+            gecicibakiye2label_txt.Text = Singleton.Instance.currentUser.GeciciBakiye + "₺";
+            kacadetalmak_txt.Text = "";
+            // güncel tarihler
+          
+        }
+
+        private void ButonVisibleControl()
+        {
+            if (Singleton.Instance.currentUser.Unvan == "SATICI")
+            {
+                sorgu = "SELECT * FROM showUruns WHERE UrunSatici='" + Singleton.Instance.currentUser.UserName + "'";
+                ShowDataGridView(Urunekle_datagrid, sorgu);
+                KendiSatislarim_CheckBox.Visible = true;
+                CheckBoxcontrol();
+                TxtDuzenle(false);
+            }
+            else
+            {
+                sorgu = "SELECT * FROM showUruns WHERE urunOnay='" + "Onaylandı" + "' AND UrunMiktari>0 ";
+                ShowDataGridView(Secereksatinal_datagrid, sorgu);
+                KendiSatislarim_CheckBox.Visible = false;
+                TxtDuzenle(true);
+            }
+
         }
         // list box doldururuluyor
-        private void otosatinalPageLoad()
+        private void OtosatinalPageLoad()
         {
             ListBoxDoldur();
             ListBoxControlEt();
         }
-        public void ListBoxDoldur() => Singleton.Instance.islem.listBoxDoldur(urunler_listbox);
+        public void ListBoxDoldur() => Singleton.Instance.islem.ListBoxDoldur(urunler_listbox);
         public void ListBoxControlEt()//Eğer aynı ürün isminden birden fazla varsa teke indiriyor
         {
             int x;
@@ -59,7 +134,7 @@ namespace borsaProjesi
         }
 
         // Anasayfa İşlemleri Page-1
-        private void urunler_listbox_SelectedIndexChanged(object sender, EventArgs e)
+        private void Urunler_listbox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (satinalgrpbox.Visible == false)
                 satinalgrpbox.Visible = true;
@@ -69,12 +144,12 @@ namespace borsaProjesi
             adet_lbl.Text = urunusatanlar_datagrid.Rows[0].Cells["urunBirimi"].FormattedValue.ToString();
         }
 
-        private void otosatinal_btn_Click(object sender, EventArgs e)
+        private void Otosatinal_btn_Click(object sender, EventArgs e)
         {
-            if (sayiMi(kacadetalmak_txt.Text))
+            if (SayiMi(kacadetalmak_txt.Text))
             {
-                int toplampara = Singleton.Instance.islem.getToplamPara(urunler_listbox.SelectedItem.ToString(), Convert.ToInt32(kacadetalmak_txt.Text));
-                int toplamadet = Singleton.Instance.islem.getUrunToplamAdet(urunler_listbox.SelectedItem.ToString());
+                int toplampara = Singleton.Instance.islem.GetToplamPara(urunler_listbox.SelectedItem.ToString(), Convert.ToInt32(kacadetalmak_txt.Text));
+                int toplamadet = Singleton.Instance.islem.GetUrunToplamAdet(urunler_listbox.SelectedItem.ToString());
                 if (Convert.ToInt32(kacadetalmak_txt.Text) > toplamadet)
                 {
                     MessageBox.Show("Magazının toplam stogunda bu kadar ürün yok,girebileceginiz maksimum deger:" + toplamadet + " " + adet_lbl.Text + " dir");
@@ -95,16 +170,10 @@ namespace borsaProjesi
             {
                 MessageBox.Show("Lütfen Geçerli Bir Deger Giriniz", "Syntax hata ");
             }
-
         }
-
-        private void hangiurunu_listele_Click(object sender, EventArgs e) => otosatinalPageLoad();
-        private void cikis_btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Singleton.Instance.login.Show();
-        }
-        private void titlebakiye_label_MouseHover(object sender, EventArgs e)
+        private void Hangiurunu_listele_Click(object sender, EventArgs e) => OtosatinalPageLoad();
+        private void Cikis_btn_Click(object sender, EventArgs e) => Singleton.Instance.ChangeScreen(this, Singleton.Instance.login);
+        private void Titlebakiye_label_MouseHover(object sender, EventArgs e)
         {
             geciciBakiye_label.Visible = true;
             unonay_label.Visible = true;
@@ -115,14 +184,14 @@ namespace borsaProjesi
             geciciBakiye_label.Visible = false;
             unonay_label.Visible = false;
         }
-        private void checkBox1_CheckedChanged(object sender, EventArgs e) => checkBoxcontrol();
-        private void btn_arttir_Click(object sender, EventArgs e) => increaseOrDecrease(true);    
-        private void btn_azalt_Click(object sender, EventArgs e) => increaseOrDecrease(false);
-        private void increaseOrDecrease(bool arttir)
+       
+        private void Btn_arttir_Click(object sender, EventArgs e) => IncreaseOrDecrease(true);    
+        private void Btn_azalt_Click(object sender, EventArgs e) => IncreaseOrDecrease(false);
+        private void IncreaseOrDecrease(bool arttir)
         {
             int x = Convert.ToInt32(adetarttir_label.Text);
             int fiyat = Convert.ToInt32(fiyat_label.Text);
-            int odecenecektutar = Convert.ToInt32(odenecekttutar_label.Text);
+            int odecenecektutar;
             if (arttir == false && x > 0)
                 x--;    
             else if (arttir == true && x < Convert.ToInt32(adetsayisi_label.Text))
@@ -135,10 +204,10 @@ namespace borsaProjesi
             odenecekttutar_label.Text = odecenecektutar.ToString();
         }
 
-        private void satinal_btn_Click(object sender, EventArgs e)
+        private void Satinal_btn_Click(object sender, EventArgs e)
         {
 
-            string x = "";
+            string x;
             if (urunsaticilabel.Text == Singleton.Instance.currentUser.UserName)
             {
                 MessageBox.Show("Kendi Ürününüzü Satın Alamazsınız", "Hatalı ürün seçimi");
@@ -154,15 +223,13 @@ namespace borsaProjesi
                         DialogResult dialogResult = MessageBox.Show("Bu ürünü almak için bakiyeniz yetersiz bu ürün için eksik bakiyeniz :" + eksikbakiye.ToString() + "₺ dir. Eksik Bakiyeyi Yüklemek istermisiniz", "Bakiye Yetersizliği !!!", MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.Yes)
                         {
-                            if (Singleton.Instance.currentUser.geciciBakiye > 0)
+                            if (Singleton.Instance.currentUser.GeciciBakiye > 0)
                             {
                                 MessageBox.Show("Henüz onaylanmamış bakiyeniz oldugu için bakiye yükleme işlemi gerçekleştirilemiyor", "Bakiye Yükleme Hata");
                             }
                             else
-                            {
-                                // Bakiye yükle
-                                Singleton.Instance.islem.GecicibakiyeGuncelle(eksikbakiye);
-
+                            {                  // Bakiye yükle
+                                Singleton.Instance.islem.GecicibakiyeGuncelle(eksikbakiye,"TL");
                             }
                         }
                     }
@@ -176,7 +243,7 @@ namespace borsaProjesi
                     {
                         MessageBox.Show("Bu urunden," + urunsaticilabel.Text + " SATICISINDA malesef kalmamış", "Stok Hata");
                     }
-                    UpdateLabelTexts();
+                    MainScreenOnLoad();
 
                 }
                 else
@@ -186,39 +253,24 @@ namespace borsaProjesi
             }
 
         }
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dataGridView1.CurrentRow.Selected = true;
-            barkodno_label.Text = dataGridView1.Rows[e.RowIndex].Cells["urunBarkodNo"].FormattedValue.ToString();
-            fiyat_label.Text = dataGridView1.Rows[e.RowIndex].Cells["UrunFiyati"].FormattedValue.ToString();
-            adetsayisi_label.Text = dataGridView1.Rows[e.RowIndex].Cells["UrunMiktari"].FormattedValue.ToString();
-            urunsaticilabel.Text = dataGridView1.Rows[e.RowIndex].Cells["UrunSatici"].FormattedValue.ToString();
-            odenecekttutar_label.Text = dataGridView1.Rows[e.RowIndex].Cells["UrunFiyati"].FormattedValue.ToString();
-            urunbirimilabel.Text = dataGridView1.Rows[e.RowIndex].Cells["UrunBirimi"].FormattedValue.ToString();
-            urunadilabel.Text = dataGridView1.Rows[e.RowIndex].Cells["UrunName"].FormattedValue.ToString();
-            if (Convert.ToInt32(adetsayisi_label.Text) > 0)
-                adetarttir_label.Text = "1";
-            else
-                adetarttir_label.Text = "0";
-            btn_arttir.Visible = true;
-            btn_azalt.Visible = true;
-        }
+     
 
         // Profil İşlemleri Page-2*---------------------------------------------------------------------------------------------------------------------
-        private void bakiye_ekle_btn_Click(object sender, EventArgs e)
+        private void Bakiye_ekle_btn_Click(object sender, EventArgs e)
         {
 
-            if (bakiyeekle_ext.Text == "")
+            if (bakiyeekle_ext.Text == "" || Parabirimleri_combo.Text == "") 
             {
-                MessageBox.Show("Lütfen Eklemek istediginiz tutarı giriniz");
+                MessageBox.Show("Lütfen Eklemek istediginiz tutarı ve para birimini giriniz");
             }
             else
             {
-                if (Singleton.Instance.currentUser.geciciBakiye == 0)
+                if (Singleton.Instance.currentUser.GeciciBakiye == 0)
                 {
-                    Singleton.Instance.islem.GecicibakiyeGuncelle(Convert.ToInt32(bakiyeekle_ext.Text));
+                    Singleton.Instance.islem.GecicibakiyeGuncelle(Convert.ToInt32(bakiyeekle_ext.Text),Parabirimleri_combo.Text);
+                    ParabirimiComboDoldur();
                     bakiyeekle_ext.Text = "";
-                    UpdateLabelTexts();
+                    MainScreenOnLoad();
                 }
                 else
                 {
@@ -229,7 +281,7 @@ namespace borsaProjesi
 
         }
        
-        private void update_btn_Click(object sender, EventArgs e)
+        private void Update_btn_Click(object sender, EventArgs e)
         {
             if (puserpass_txt.Text == ""||p_emailtxt.Text==""||padres_txt.Text==""||ptelefonno_txt.Text=="")
             {
@@ -253,38 +305,24 @@ namespace borsaProjesi
 
                 }
             }
-            guncelProfil();
+            GuncelProfil();
         }
 
         // Urun İşlemleri Page -3 *---------------------------------------------------------------------------------------------------------------------
 
 
-        private void nmsattiklarim_btn_Click(object sender, EventArgs e) => ListeleComboBoxControl();
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-           
-                dataGridView2.CurrentRow.Selected = true;
-                g_urunid.Text = dataGridView2.Rows[e.RowIndex].Cells["UrunID"].FormattedValue.ToString();
-                g_urunname.Text = dataGridView2.Rows[e.RowIndex].Cells["UrunName"].FormattedValue.ToString();
-                g_urunmiktari.Text = dataGridView2.Rows[e.RowIndex].Cells["UrunMiktari"].FormattedValue.ToString();
-                g_urunbirimi.Text = dataGridView2.Rows[e.RowIndex].Cells["urunBirimi"].FormattedValue.ToString();
-                g_urunfiyati.Text = dataGridView2.Rows[e.RowIndex].Cells["UrunFiyati"].FormattedValue.ToString();
-                g_urunturu.Text = dataGridView2.Rows[e.RowIndex].Cells["UrunTuru"].FormattedValue.ToString();
-                g_urunbarkod.Text = dataGridView2.Rows[e.RowIndex].Cells["urunBarkodNo"].FormattedValue.ToString();
-          
-        }
-        private void add_urun_btn_Click(object sender, EventArgs e)
+        private void BenimSattiklarim_btn_Click(object sender, EventArgs e) => ListeleComboBoxControl();
+      
+        private void Add_urun_btn_Click(object sender, EventArgs e)
         {
             Singleton.Instance.islem.UrunEkle(add_barkodno, urunbirimibox, add_urunfiyati, add_urunmiktari, add_urunname, add_urunturu, Singleton.Instance.currentUser.UserName, groupBox1);
             MessageBox.Show("Urun eklendi admin onayı bekleniyor", "Urun ekleme Başarılı");
             ListeleComboBoxControl();
-      
         }
 
-        private void urun_guncelle_btn_Click(object sender, EventArgs e)
+        private void Urun_guncelle_btn_Click(object sender, EventArgs e)
         {
-            if (sayiMi(g_urunfiyati.Text) && sayiMi(g_urunmiktari.Text))
+            if (SayiMi(g_urunfiyati.Text) && SayiMi(g_urunmiktari.Text))
             {
              
                 if (Convert.ToInt32(g_urunfiyati.Text) <= 0 || Convert.ToInt32(g_urunmiktari.Text) <= 0)
@@ -307,15 +345,9 @@ namespace borsaProjesi
         }
 
         // Timer Kayan Yazı
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            this.Text = this.Text.Substring(1) + this.Text.Substring(0, 1);
-
-            textBox5.Text = textBox5.Text.Substring(1) + textBox5.Text.Substring(0, 1);
-            textBox4.Text = textBox4.Text.Substring(1) + textBox4.Text.Substring(0, 1);
-        }
+       
         // Bool Sayimi 
-        static bool sayiMi(string deger)
+        static bool SayiMi(string deger)
         {
             try
             {
@@ -328,68 +360,8 @@ namespace borsaProjesi
             }
         }
         // Fonksiyonlar
-        private void ShowDataGridView(DataGridView x, string sorgu) => x.DataSource = Singleton.Instance.islem.showdatabases(sorgu, baglanti);
-        public void UpdateLabelTexts()
-        {            
-            if (Singleton.Instance.currentUser.cinsiyet == "Kadın")
-            {
-                kadinimage.Visible = true; 
-                kadinimage2.Visible = true;
-            }
-            else
-            {
-                kadinimage.Visible = false;
-                kadinimage2.Visible = false;
-            }
-            urunler_listbox.Items.Clear();
-            satinalgrpbox.Visible = false;
-            ButonVisibleControl();
-            guncelProfil();
-        }
-        public void guncelProfil()
-        {
-            puserid_label.Text = Singleton.Instance.currentUser.UserID.ToString();
-            pusername_label.Text = Singleton.Instance.currentUser.UserName;
-            puserpass_txt.Text = Singleton.Instance.currentUser.UserPass;
+        private void ShowDataGridView(DataGridView x, string sorgu) => x.DataSource = Singleton.Instance.islem.Showdatabases(sorgu);
 
-            profilad_label.Text = Singleton.Instance.currentUser.Ad;
-            psoyad_label.Text = Singleton.Instance.currentUser.SoyAd;
-            ptcno.Text = Singleton.Instance.currentUser.Tc.ToString();
-            ptelefonno_txt.Text = Singleton.Instance.currentUser.Telefon.ToString();
-            padres_txt.Text = Singleton.Instance.currentUser.Adres;
-            p_emailtxt.Text = Singleton.Instance.currentUser.Eposta;
-            p_unvan.Text = Singleton.Instance.currentUser.Unvan;
-            uyelik_turu.Text= Singleton.Instance.currentUser.Unvan;
-
-            //***********
-            main_ad.Text = Singleton.Instance.currentUser.Ad;
-            main_soyad.Text = Singleton.Instance.currentUser.SoyAd + "";
-            bakiye_label.Text = Singleton.Instance.currentUser.Bakiye + "₺";
-            geciciBakiye_label.Text = Singleton.Instance.currentUser.geciciBakiye + "₺";
-            bakiyelabel2_txt.Text = Singleton.Instance.currentUser.Bakiye + "₺"; ;
-            gecicibakiye2label_txt.Text = Singleton.Instance.currentUser.geciciBakiye + "₺";
-            kacadetalmak_txt.Text = "";
-        }
-
-        private void ButonVisibleControl()
-        {
-            if (Singleton.Instance.currentUser.Unvan == "SATICI")
-            {
-                sorgu = "SELECT * FROM showUruns WHERE UrunSatici='" + Singleton.Instance.currentUser.UserName + "'";
-                ShowDataGridView(dataGridView2, sorgu);         
-                checkBox1.Visible = true;
-                checkBoxcontrol();
-                TxtDuzenle(false);
-            }
-            else
-            {
-                sorgu = "SELECT * FROM showUruns WHERE urunOnay='" + "Onaylandı" + "' AND UrunMiktari>0 ";
-                ShowDataGridView(dataGridView1, sorgu);
-                checkBox1.Visible = false;              
-                TxtDuzenle(true);
-            }
-           
-        }
         private void TxtDuzenle(bool x)
         {
             // 1213; 498
@@ -402,37 +374,65 @@ namespace borsaProjesi
             if (x == false)
                 txt_control.Visible = false;
         }
-        private void checkBoxcontrol()
+        private void CheckBoxcontrol()
         {
 
-            if (checkBox1.Checked == true)
+            if (KendiSatislarim_CheckBox.Checked == true)
             {           
                 sorgu = "SELECT * FROM showUruns WHERE urunOnay='" + "Onaylandı" + "' AND UrunMiktari>0 ";
-                ShowDataGridView(dataGridView1, sorgu);
+                ShowDataGridView(Secereksatinal_datagrid, sorgu);
             }
 
-            if (checkBox1.Checked == false)
+            if (KendiSatislarim_CheckBox.Checked == false)
             {
                 sorgu = "SELECT * FROM showUruns WHERE urunOnay='" + "Onaylandı" + "' AND UrunMiktari>0 AND NOT UrunSatici='" + Singleton.Instance.currentUser.UserName + "'";
-                ShowDataGridView(dataGridView1, sorgu);
+                ShowDataGridView(Secereksatinal_datagrid, sorgu);
                
             }
         }
         private void ListeleComboBoxControl()
         {
-            sorgu = "SELECT * FROM showUruns WHERE UrunSatici='" + Singleton.Instance.currentUser.Ad + "'";
             tumsatislarim_label.Text = listeleCombo.Text;
+            sorgu = "SELECT * FROM showUruns WHERE UrunSatici='" + Singleton.Instance.currentUser.Ad + "'";     
             if (listeleCombo.Text == "Tüm Satışlarım")
                 sorgu = "SELECT * FROM showUruns WHERE UrunSatici='" + Singleton.Instance.currentUser.Ad + "'";
-
             if (listeleCombo.Text == "Onaylanmış Satışlarım")
                 sorgu = "SELECT * FROM showUruns WHERE UrunSatici='" + Singleton.Instance.currentUser.Ad + "' AND urunonay='" + "Onaylandı" + "'";
-
             if (listeleCombo.Text == "Onaylanmamış Satışlarım")
                 sorgu = "SELECT * FROM showUruns WHERE UrunSatici='" + Singleton.Instance.currentUser.Ad + "' AND urunonay='" + "Onaylanmadı" + "'";
-            ShowDataGridView(dataGridView2, sorgu);
+            ShowDataGridView(Urunekle_datagrid, sorgu);
         }
 
-       
+        private void KendiSatislarim_CheckBox_CheckedChanged(object sender, EventArgs e) => CheckBoxcontrol();
+
+        private void Secereksatinal_datagrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Secereksatinal_datagrid.CurrentRow.Selected = true;
+            barkodno_label.Text = Secereksatinal_datagrid.Rows[e.RowIndex].Cells["urunBarkodNo"].FormattedValue.ToString();
+            fiyat_label.Text = Secereksatinal_datagrid.Rows[e.RowIndex].Cells["UrunFiyati"].FormattedValue.ToString();
+            adetsayisi_label.Text = Secereksatinal_datagrid.Rows[e.RowIndex].Cells["UrunMiktari"].FormattedValue.ToString();
+            urunsaticilabel.Text = Secereksatinal_datagrid.Rows[e.RowIndex].Cells["UrunSatici"].FormattedValue.ToString();
+            odenecekttutar_label.Text = Secereksatinal_datagrid.Rows[e.RowIndex].Cells["UrunFiyati"].FormattedValue.ToString();
+            urunbirimilabel.Text = Secereksatinal_datagrid.Rows[e.RowIndex].Cells["UrunBirimi"].FormattedValue.ToString();
+            urunadilabel.Text = Secereksatinal_datagrid.Rows[e.RowIndex].Cells["UrunName"].FormattedValue.ToString();
+            if (Convert.ToInt32(adetsayisi_label.Text) > 0)
+                adetarttir_label.Text = "1";
+            else
+                adetarttir_label.Text = "0";
+            btn_arttir.Visible = true;
+            btn_azalt.Visible = true;
+        }
+
+        private void Urunekle_datagrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Urunekle_datagrid.CurrentRow.Selected = true;
+            g_urunid.Text = Urunekle_datagrid.Rows[e.RowIndex].Cells["UrunID"].FormattedValue.ToString();
+            g_urunname.Text = Urunekle_datagrid.Rows[e.RowIndex].Cells["UrunName"].FormattedValue.ToString();
+            g_urunmiktari.Text = Urunekle_datagrid.Rows[e.RowIndex].Cells["UrunMiktari"].FormattedValue.ToString();
+            g_urunbirimi.Text = Urunekle_datagrid.Rows[e.RowIndex].Cells["urunBirimi"].FormattedValue.ToString();
+            g_urunfiyati.Text = Urunekle_datagrid.Rows[e.RowIndex].Cells["UrunFiyati"].FormattedValue.ToString();
+            g_urunturu.Text = Urunekle_datagrid.Rows[e.RowIndex].Cells["UrunTuru"].FormattedValue.ToString();
+            g_urunbarkod.Text = Urunekle_datagrid.Rows[e.RowIndex].Cells["urunBarkodNo"].FormattedValue.ToString();
+        }
     }
 }

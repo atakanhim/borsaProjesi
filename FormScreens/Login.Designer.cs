@@ -43,11 +43,10 @@ namespace borsaProjesi
             // 
             this.kadi_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kadi_txt.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kadi_txt.Location = new System.Drawing.Point(229, 256);
-            this.kadi_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kadi_txt.Location = new System.Drawing.Point(172, 208);
             this.kadi_txt.Multiline = true;
             this.kadi_txt.Name = "kadi_txt";
-            this.kadi_txt.Size = new System.Drawing.Size(408, 33);
+            this.kadi_txt.Size = new System.Drawing.Size(306, 27);
             this.kadi_txt.TabIndex = 2;
             // 
             // password_txt
@@ -55,12 +54,11 @@ namespace borsaProjesi
             this.password_txt.BackColor = System.Drawing.SystemColors.Window;
             this.password_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password_txt.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.password_txt.Location = new System.Drawing.Point(229, 313);
-            this.password_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.password_txt.Location = new System.Drawing.Point(172, 254);
             this.password_txt.Multiline = true;
             this.password_txt.Name = "password_txt";
             this.password_txt.PasswordChar = '*';
-            this.password_txt.Size = new System.Drawing.Size(408, 32);
+            this.password_txt.Size = new System.Drawing.Size(306, 26);
             this.password_txt.TabIndex = 2;
             // 
             // geri_btn
@@ -73,13 +71,12 @@ namespace borsaProjesi
             this.geri_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.geri_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.geri_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.geri_btn.Location = new System.Drawing.Point(715, 14);
-            this.geri_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.geri_btn.Location = new System.Drawing.Point(536, 11);
             this.geri_btn.Name = "geri_btn";
-            this.geri_btn.Size = new System.Drawing.Size(85, 71);
+            this.geri_btn.Size = new System.Drawing.Size(64, 58);
             this.geri_btn.TabIndex = 3;
             this.geri_btn.UseVisualStyleBackColor = false;
-            this.geri_btn.Click += new System.EventHandler(this.geri_btn_Click);
+            this.geri_btn.Click += new System.EventHandler(this.Geri_btn_Click);
             // 
             // sign_up_btn
             // 
@@ -91,14 +88,13 @@ namespace borsaProjesi
             this.sign_up_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.sign_up_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sign_up_btn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sign_up_btn.Location = new System.Drawing.Point(424, 401);
-            this.sign_up_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sign_up_btn.Location = new System.Drawing.Point(318, 326);
             this.sign_up_btn.Name = "sign_up_btn";
-            this.sign_up_btn.Size = new System.Drawing.Size(228, 50);
+            this.sign_up_btn.Size = new System.Drawing.Size(171, 41);
             this.sign_up_btn.TabIndex = 4;
             this.sign_up_btn.Text = "SIGN UP";
             this.sign_up_btn.UseVisualStyleBackColor = false;
-            this.sign_up_btn.Click += new System.EventHandler(this.sign_up_btn_Click);
+            this.sign_up_btn.Click += new System.EventHandler(this.Sign_up_btn_Click);
             // 
             // Giris_yap_btn
             // 
@@ -110,10 +106,9 @@ namespace borsaProjesi
             this.Giris_yap_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Giris_yap_btn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Giris_yap_btn.ForeColor = System.Drawing.Color.Black;
-            this.Giris_yap_btn.Location = new System.Drawing.Point(160, 401);
-            this.Giris_yap_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Giris_yap_btn.Location = new System.Drawing.Point(120, 326);
             this.Giris_yap_btn.Name = "Giris_yap_btn";
-            this.Giris_yap_btn.Size = new System.Drawing.Size(228, 50);
+            this.Giris_yap_btn.Size = new System.Drawing.Size(171, 41);
             this.Giris_yap_btn.TabIndex = 1;
             this.Giris_yap_btn.Text = "LOGIN";
             this.Giris_yap_btn.UseVisualStyleBackColor = false;
@@ -124,21 +119,20 @@ namespace borsaProjesi
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(324, 74);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(243, 60);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 155);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 126);
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(816, 553);
+            this.ClientSize = new System.Drawing.Size(612, 449);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.sign_up_btn);
             this.Controls.Add(this.geri_btn);
@@ -147,9 +141,9 @@ namespace borsaProjesi
             this.Controls.Add(this.Giris_yap_btn);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

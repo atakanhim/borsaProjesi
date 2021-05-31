@@ -29,13 +29,13 @@ namespace borsaProjesi
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.anasayfa_page = new System.Windows.Forms.TabPage();
+            this.Anasayfa_Tarih = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.satinalgrpbox = new System.Windows.Forms.GroupBox();
@@ -50,7 +50,7 @@ namespace borsaProjesi
             this.label31 = new System.Windows.Forms.Label();
             this.urunler_listbox = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.KendiSatislarim_CheckBox = new System.Windows.Forms.CheckBox();
             this.satinal_btn = new System.Windows.Forms.Button();
             this.btn_azalt = new System.Windows.Forms.Button();
             this.btn_arttir = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@ namespace borsaProjesi
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Secereksatinal_datagrid = new System.Windows.Forms.DataGridView();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -82,7 +82,6 @@ namespace borsaProjesi
             this.label1 = new System.Windows.Forms.Label();
             this.kadinimage = new System.Windows.Forms.PictureBox();
             this.erkekimage = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.geciciBakiye_label = new System.Windows.Forms.Label();
             this.unonay_label = new System.Windows.Forms.Label();
             this.bakiye_label = new System.Windows.Forms.Label();
@@ -90,6 +89,7 @@ namespace borsaProjesi
             this.main_soyad = new System.Windows.Forms.Label();
             this.main_ad = new System.Windows.Forms.Label();
             this.profil_page = new System.Windows.Forms.TabPage();
+            this.Profil_Tarih = new System.Windows.Forms.Label();
             this.kadinimage2 = new System.Windows.Forms.PictureBox();
             this.erkekimage2 = new System.Windows.Forms.PictureBox();
             this.profil_groupbox = new System.Windows.Forms.GroupBox();
@@ -116,10 +116,12 @@ namespace borsaProjesi
             this.adsaad = new System.Windows.Forms.Label();
             this.sss = new System.Windows.Forms.Label();
             this.bakiye_grpbox = new System.Windows.Forms.GroupBox();
+            this.Parabirimi_label = new System.Windows.Forms.Label();
+            this.Parabirimleri_combo = new System.Windows.Forms.ComboBox();
             this.gecicibakiye2label_txt = new System.Windows.Forms.Label();
             this.bakiyelabel2_txt = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.onaylanmamisbakiye_label = new System.Windows.Forms.Label();
+            this.hesapbakiye_label = new System.Windows.Forms.Label();
             this.bakiye_ekle_btn = new System.Windows.Forms.Button();
             this.bakiyeekle_ext = new System.Windows.Forms.TextBox();
             this.bakiye_ekle_lbl = new System.Windows.Forms.Label();
@@ -140,7 +142,7 @@ namespace borsaProjesi
             this.tumsatislarim_label = new System.Windows.Forms.Label();
             this.listeleCombo = new System.Windows.Forms.ComboBox();
             this.nmsattiklarim_btn = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Urunekle_datagrid = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.urunbirimibox = new System.Windows.Forms.ComboBox();
             this.add_urun_btn = new System.Windows.Forms.Button();
@@ -174,7 +176,6 @@ namespace borsaProjesi
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.cikis_btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.anasayfa_page.SuspendLayout();
@@ -183,7 +184,7 @@ namespace borsaProjesi
             this.satinalgrpbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.urunusatanlar_datagrid)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Secereksatinal_datagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kadinimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erkekimage)).BeginInit();
             this.profil_page.SuspendLayout();
@@ -193,7 +194,7 @@ namespace borsaProjesi
             this.bakiye_grpbox.SuspendLayout();
             this.satici_page.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Urunekle_datagrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -213,12 +214,12 @@ namespace borsaProjesi
             // 
             this.anasayfa_page.BackColor = System.Drawing.Color.Wheat;
             this.anasayfa_page.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.anasayfa_page.Controls.Add(this.Anasayfa_Tarih);
             this.anasayfa_page.Controls.Add(this.tabControl2);
             this.anasayfa_page.Controls.Add(this.uyelik_turu);
             this.anasayfa_page.Controls.Add(this.label1);
             this.anasayfa_page.Controls.Add(this.kadinimage);
             this.anasayfa_page.Controls.Add(this.erkekimage);
-            this.anasayfa_page.Controls.Add(this.textBox5);
             this.anasayfa_page.Controls.Add(this.geciciBakiye_label);
             this.anasayfa_page.Controls.Add(this.unonay_label);
             this.anasayfa_page.Controls.Add(this.bakiye_label);
@@ -233,15 +234,25 @@ namespace borsaProjesi
             this.anasayfa_page.TabIndex = 0;
             this.anasayfa_page.Text = "Ana Sayfa";
             // 
+            // Anasayfa_Tarih
+            // 
+            this.Anasayfa_Tarih.AutoSize = true;
+            this.Anasayfa_Tarih.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Anasayfa_Tarih.Location = new System.Drawing.Point(1050, 3);
+            this.Anasayfa_Tarih.Name = "Anasayfa_Tarih";
+            this.Anasayfa_Tarih.Size = new System.Drawing.Size(82, 26);
+            this.Anasayfa_Tarih.TabIndex = 47;
+            this.Anasayfa_Tarih.Text = "Tarih :";
+            // 
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage1);
             this.tabControl2.Controls.Add(this.tabPage2);
-            this.tabControl2.Location = new System.Drawing.Point(3, 168);
+            this.tabControl2.Location = new System.Drawing.Point(3, 104);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1262, 388);
+            this.tabControl2.Size = new System.Drawing.Size(1262, 452);
             this.tabControl2.TabIndex = 46;
             // 
             // tabPage1
@@ -254,7 +265,7 @@ namespace borsaProjesi
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1254, 360);
+            this.tabPage1.Size = new System.Drawing.Size(1254, 424);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Otomatik Satın Al";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -268,11 +279,11 @@ namespace borsaProjesi
             this.satinalgrpbox.Controls.Add(this.label34);
             this.satinalgrpbox.Controls.Add(this.adet_lbl);
             this.satinalgrpbox.Controls.Add(this.label33);
-            this.satinalgrpbox.Location = new System.Drawing.Point(204, 32);
+            this.satinalgrpbox.Location = new System.Drawing.Point(234, 32);
             this.satinalgrpbox.Margin = new System.Windows.Forms.Padding(2);
             this.satinalgrpbox.Name = "satinalgrpbox";
             this.satinalgrpbox.Padding = new System.Windows.Forms.Padding(2);
-            this.satinalgrpbox.Size = new System.Drawing.Size(898, 322);
+            this.satinalgrpbox.Size = new System.Drawing.Size(891, 314);
             this.satinalgrpbox.TabIndex = 6;
             this.satinalgrpbox.TabStop = false;
             // 
@@ -287,18 +298,18 @@ namespace borsaProjesi
             this.otosatinal_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.otosatinal_btn.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.otosatinal_btn.ForeColor = System.Drawing.SystemColors.Info;
-            this.otosatinal_btn.Location = new System.Drawing.Point(369, 221);
+            this.otosatinal_btn.Location = new System.Drawing.Point(524, 231);
             this.otosatinal_btn.Margin = new System.Windows.Forms.Padding(2);
             this.otosatinal_btn.Name = "otosatinal_btn";
             this.otosatinal_btn.Size = new System.Drawing.Size(199, 79);
             this.otosatinal_btn.TabIndex = 4;
             this.otosatinal_btn.Text = "Otomatik Satın Al";
             this.otosatinal_btn.UseVisualStyleBackColor = true;
-            this.otosatinal_btn.Click += new System.EventHandler(this.otosatinal_btn_Click);
+            this.otosatinal_btn.Click += new System.EventHandler(this.Otosatinal_btn_Click);
             // 
             // urunusatanlar_datagrid
             // 
-            this.urunusatanlar_datagrid.BackgroundColor = System.Drawing.Color.White;
+            this.urunusatanlar_datagrid.BackgroundColor = System.Drawing.Color.CadetBlue;
             this.urunusatanlar_datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.urunusatanlar_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.urunusatanlar_datagrid.Location = new System.Drawing.Point(14, 66);
@@ -312,7 +323,7 @@ namespace borsaProjesi
             // kacadetalmak_txt
             // 
             this.kacadetalmak_txt.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kacadetalmak_txt.Location = new System.Drawing.Point(64, 242);
+            this.kacadetalmak_txt.Location = new System.Drawing.Point(78, 256);
             this.kacadetalmak_txt.Margin = new System.Windows.Forms.Padding(2);
             this.kacadetalmak_txt.Name = "kacadetalmak_txt";
             this.kacadetalmak_txt.Size = new System.Drawing.Size(165, 32);
@@ -322,7 +333,7 @@ namespace borsaProjesi
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label36.Location = new System.Drawing.Point(114, 206);
+            this.label36.Location = new System.Drawing.Point(128, 220);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(180, 24);
@@ -333,7 +344,7 @@ namespace borsaProjesi
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label34.Location = new System.Drawing.Point(363, 20);
+            this.label34.Location = new System.Drawing.Point(312, 31);
             this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(248, 33);
@@ -344,7 +355,7 @@ namespace borsaProjesi
             // 
             this.adet_lbl.AutoSize = true;
             this.adet_lbl.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.adet_lbl.Location = new System.Drawing.Point(60, 206);
+            this.adet_lbl.Location = new System.Drawing.Point(74, 220);
             this.adet_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.adet_lbl.Name = "adet_lbl";
             this.adet_lbl.Size = new System.Drawing.Size(50, 24);
@@ -355,7 +366,7 @@ namespace borsaProjesi
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Times New Roman", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label33.Location = new System.Drawing.Point(12, 206);
+            this.label33.Location = new System.Drawing.Point(26, 220);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(44, 24);
@@ -364,20 +375,20 @@ namespace borsaProjesi
             // 
             // hangiurunu_listele
             // 
-            this.hangiurunu_listele.Location = new System.Drawing.Point(25, 46);
+            this.hangiurunu_listele.Location = new System.Drawing.Point(49, 50);
             this.hangiurunu_listele.Margin = new System.Windows.Forms.Padding(2);
             this.hangiurunu_listele.Name = "hangiurunu_listele";
             this.hangiurunu_listele.Size = new System.Drawing.Size(136, 32);
             this.hangiurunu_listele.TabIndex = 5;
             this.hangiurunu_listele.Text = "Listele";
             this.hangiurunu_listele.UseVisualStyleBackColor = true;
-            this.hangiurunu_listele.Click += new System.EventHandler(this.hangiurunu_listele_Click);
+            this.hangiurunu_listele.Click += new System.EventHandler(this.Hangiurunu_listele_Click);
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label31.Location = new System.Drawing.Point(22, 30);
+            this.label31.Location = new System.Drawing.Point(22, 32);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(191, 16);
@@ -390,16 +401,16 @@ namespace borsaProjesi
             this.urunler_listbox.ItemHeight = 15;
             this.urunler_listbox.Items.AddRange(new object[] {
             "Items"});
-            this.urunler_listbox.Location = new System.Drawing.Point(25, 83);
+            this.urunler_listbox.Location = new System.Drawing.Point(49, 87);
             this.urunler_listbox.Margin = new System.Windows.Forms.Padding(2);
             this.urunler_listbox.Name = "urunler_listbox";
             this.urunler_listbox.Size = new System.Drawing.Size(137, 259);
             this.urunler_listbox.TabIndex = 0;
-            this.urunler_listbox.SelectedIndexChanged += new System.EventHandler(this.urunler_listbox_SelectedIndexChanged);
+            this.urunler_listbox.SelectedIndexChanged += new System.EventHandler(this.Urunler_listbox_SelectedIndexChanged);
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.checkBox1);
+            this.tabPage2.Controls.Add(this.KendiSatislarim_CheckBox);
             this.tabPage2.Controls.Add(this.satinal_btn);
             this.tabPage2.Controls.Add(this.btn_azalt);
             this.tabPage2.Controls.Add(this.btn_arttir);
@@ -421,7 +432,7 @@ namespace borsaProjesi
             this.tabPage2.Controls.Add(this.textBox6);
             this.tabPage2.Controls.Add(this.textBox8);
             this.tabPage2.Controls.Add(this.textBox7);
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.Secereksatinal_datagrid);
             this.tabPage2.Controls.Add(this.textBox10);
             this.tabPage2.Controls.Add(this.textBox11);
             this.tabPage2.Controls.Add(this.textBox12);
@@ -431,22 +442,22 @@ namespace borsaProjesi
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1254, 360);
+            this.tabPage2.Size = new System.Drawing.Size(1254, 424);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Seçerek Satın Al";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // KendiSatislarim_CheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(782, 21);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(158, 19);
-            this.checkBox1.TabIndex = 71;
-            this.checkBox1.Text = "Kendi Satışlarım Gözüksün";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.KendiSatislarim_CheckBox.AutoSize = true;
+            this.KendiSatislarim_CheckBox.Location = new System.Drawing.Point(782, 21);
+            this.KendiSatislarim_CheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.KendiSatislarim_CheckBox.Name = "KendiSatislarim_CheckBox";
+            this.KendiSatislarim_CheckBox.Size = new System.Drawing.Size(158, 19);
+            this.KendiSatislarim_CheckBox.TabIndex = 71;
+            this.KendiSatislarim_CheckBox.Text = "Kendi Satışlarım Gözüksün";
+            this.KendiSatislarim_CheckBox.UseVisualStyleBackColor = true;
+            this.KendiSatislarim_CheckBox.CheckedChanged += new System.EventHandler(this.KendiSatislarim_CheckBox_CheckedChanged);
             // 
             // satinal_btn
             // 
@@ -467,7 +478,7 @@ namespace borsaProjesi
             this.satinal_btn.TabIndex = 70;
             this.satinal_btn.Text = "SATIN AL";
             this.satinal_btn.UseVisualStyleBackColor = false;
-            this.satinal_btn.Click += new System.EventHandler(this.satinal_btn_Click);
+            this.satinal_btn.Click += new System.EventHandler(this.Satinal_btn_Click);
             // 
             // btn_azalt
             // 
@@ -480,7 +491,7 @@ namespace borsaProjesi
             this.btn_azalt.Text = "-";
             this.btn_azalt.UseVisualStyleBackColor = true;
             this.btn_azalt.Visible = false;
-            this.btn_azalt.Click += new System.EventHandler(this.btn_azalt_Click);
+            this.btn_azalt.Click += new System.EventHandler(this.Btn_azalt_Click);
             // 
             // btn_arttir
             // 
@@ -493,7 +504,7 @@ namespace borsaProjesi
             this.btn_arttir.Text = "+";
             this.btn_arttir.UseVisualStyleBackColor = true;
             this.btn_arttir.Visible = false;
-            this.btn_arttir.Click += new System.EventHandler(this.btn_arttir_Click);
+            this.btn_arttir.Click += new System.EventHandler(this.Btn_arttir_Click);
             // 
             // urunbirimilabel
             // 
@@ -698,28 +709,28 @@ namespace borsaProjesi
             this.textBox7.Text = "Urun Onay";
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dataGridView1
+            // Secereksatinal_datagrid
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 71);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(986, 266);
-            this.dataGridView1.TabIndex = 44;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.Secereksatinal_datagrid.AllowUserToAddRows = false;
+            this.Secereksatinal_datagrid.AllowUserToDeleteRows = false;
+            this.Secereksatinal_datagrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Secereksatinal_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Secereksatinal_datagrid.ColumnHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Secereksatinal_datagrid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Secereksatinal_datagrid.Location = new System.Drawing.Point(4, 71);
+            this.Secereksatinal_datagrid.Margin = new System.Windows.Forms.Padding(2);
+            this.Secereksatinal_datagrid.Name = "Secereksatinal_datagrid";
+            this.Secereksatinal_datagrid.ReadOnly = true;
+            this.Secereksatinal_datagrid.Size = new System.Drawing.Size(986, 266);
+            this.Secereksatinal_datagrid.TabIndex = 44;
+            this.Secereksatinal_datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Secereksatinal_datagrid_CellClick);
             // 
             // textBox10
             // 
@@ -801,7 +812,7 @@ namespace borsaProjesi
             this.uyelik_turu.AutoSize = true;
             this.uyelik_turu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.uyelik_turu.ForeColor = System.Drawing.Color.DarkBlue;
-            this.uyelik_turu.Location = new System.Drawing.Point(28, 62);
+            this.uyelik_turu.Location = new System.Drawing.Point(237, 61);
             this.uyelik_turu.Name = "uyelik_turu";
             this.uyelik_turu.Size = new System.Drawing.Size(17, 19);
             this.uyelik_turu.TabIndex = 45;
@@ -813,7 +824,7 @@ namespace borsaProjesi
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(28, 27);
+            this.label1.Location = new System.Drawing.Point(237, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 19);
             this.label1.TabIndex = 45;
@@ -824,7 +835,7 @@ namespace borsaProjesi
             this.kadinimage.BackColor = System.Drawing.Color.Transparent;
             this.kadinimage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("kadinimage.BackgroundImage")));
             this.kadinimage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.kadinimage.Location = new System.Drawing.Point(145, 10);
+            this.kadinimage.Location = new System.Drawing.Point(354, 9);
             this.kadinimage.Name = "kadinimage";
             this.kadinimage.Size = new System.Drawing.Size(68, 71);
             this.kadinimage.TabIndex = 44;
@@ -835,34 +846,18 @@ namespace borsaProjesi
             this.erkekimage.BackColor = System.Drawing.Color.Transparent;
             this.erkekimage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("erkekimage.BackgroundImage")));
             this.erkekimage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.erkekimage.Location = new System.Drawing.Point(145, 10);
+            this.erkekimage.Location = new System.Drawing.Point(354, 9);
             this.erkekimage.Name = "erkekimage";
             this.erkekimage.Size = new System.Drawing.Size(68, 71);
             this.erkekimage.TabIndex = 44;
             this.erkekimage.TabStop = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Aqua;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Enabled = false;
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.textBox5.Location = new System.Drawing.Point(2, 105);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(1267, 58);
-            this.textBox5.TabIndex = 39;
-            this.textBox5.Text = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Pazar";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // geciciBakiye_label
             // 
             this.geciciBakiye_label.AutoSize = true;
             this.geciciBakiye_label.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.geciciBakiye_label.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.geciciBakiye_label.Location = new System.Drawing.Point(1210, 27);
+            this.geciciBakiye_label.Location = new System.Drawing.Point(880, 27);
             this.geciciBakiye_label.Name = "geciciBakiye_label";
             this.geciciBakiye_label.Size = new System.Drawing.Size(28, 18);
             this.geciciBakiye_label.TabIndex = 10;
@@ -873,7 +868,7 @@ namespace borsaProjesi
             // 
             this.unonay_label.AutoSize = true;
             this.unonay_label.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.unonay_label.Location = new System.Drawing.Point(1043, 25);
+            this.unonay_label.Location = new System.Drawing.Point(713, 25);
             this.unonay_label.Name = "unonay_label";
             this.unonay_label.Size = new System.Drawing.Size(161, 18);
             this.unonay_label.TabIndex = 11;
@@ -885,7 +880,7 @@ namespace borsaProjesi
             this.bakiye_label.AutoSize = true;
             this.bakiye_label.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bakiye_label.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.bakiye_label.Location = new System.Drawing.Point(1199, 9);
+            this.bakiye_label.Location = new System.Drawing.Point(869, 9);
             this.bakiye_label.Name = "bakiye_label";
             this.bakiye_label.Size = new System.Drawing.Size(48, 18);
             this.bakiye_label.TabIndex = 12;
@@ -895,19 +890,19 @@ namespace borsaProjesi
             // 
             this.titlebakiye_label.AutoSize = true;
             this.titlebakiye_label.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.titlebakiye_label.Location = new System.Drawing.Point(1143, 9);
+            this.titlebakiye_label.Location = new System.Drawing.Point(813, 9);
             this.titlebakiye_label.Name = "titlebakiye_label";
             this.titlebakiye_label.Size = new System.Drawing.Size(61, 18);
             this.titlebakiye_label.TabIndex = 13;
             this.titlebakiye_label.Text = "Bakiye: ";
             this.titlebakiye_label.MouseLeave += new System.EventHandler(this.Titlebakiye_label_MouseLeave);
-            this.titlebakiye_label.MouseHover += new System.EventHandler(this.titlebakiye_label_MouseHover);
+            this.titlebakiye_label.MouseHover += new System.EventHandler(this.Titlebakiye_label_MouseHover);
             // 
             // main_soyad
             // 
             this.main_soyad.AutoSize = true;
             this.main_soyad.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.main_soyad.Location = new System.Drawing.Point(196, 84);
+            this.main_soyad.Location = new System.Drawing.Point(405, 83);
             this.main_soyad.Name = "main_soyad";
             this.main_soyad.Size = new System.Drawing.Size(84, 18);
             this.main_soyad.TabIndex = 14;
@@ -917,7 +912,7 @@ namespace borsaProjesi
             // 
             this.main_ad.AutoSize = true;
             this.main_ad.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.main_ad.Location = new System.Drawing.Point(142, 84);
+            this.main_ad.Location = new System.Drawing.Point(351, 83);
             this.main_ad.Name = "main_ad";
             this.main_ad.Size = new System.Drawing.Size(48, 18);
             this.main_ad.TabIndex = 17;
@@ -927,6 +922,7 @@ namespace borsaProjesi
             // 
             this.profil_page.BackColor = System.Drawing.Color.Wheat;
             this.profil_page.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.profil_page.Controls.Add(this.Profil_Tarih);
             this.profil_page.Controls.Add(this.kadinimage2);
             this.profil_page.Controls.Add(this.erkekimage2);
             this.profil_page.Controls.Add(this.profil_groupbox);
@@ -940,6 +936,16 @@ namespace borsaProjesi
             this.profil_page.Size = new System.Drawing.Size(1270, 554);
             this.profil_page.TabIndex = 1;
             this.profil_page.Text = "Profil";
+            // 
+            // Profil_Tarih
+            // 
+            this.Profil_Tarih.AutoSize = true;
+            this.Profil_Tarih.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Profil_Tarih.Location = new System.Drawing.Point(1051, 3);
+            this.Profil_Tarih.Name = "Profil_Tarih";
+            this.Profil_Tarih.Size = new System.Drawing.Size(82, 26);
+            this.Profil_Tarih.TabIndex = 42;
+            this.Profil_Tarih.Text = "Tarih :";
             // 
             // kadinimage2
             // 
@@ -985,7 +991,7 @@ namespace borsaProjesi
             this.profil_groupbox.Controls.Add(this.userpass_label);
             this.profil_groupbox.Controls.Add(this.adsaad);
             this.profil_groupbox.Controls.Add(this.sss);
-            this.profil_groupbox.Location = new System.Drawing.Point(373, 226);
+            this.profil_groupbox.Location = new System.Drawing.Point(226, 248);
             this.profil_groupbox.Name = "profil_groupbox";
             this.profil_groupbox.Size = new System.Drawing.Size(606, 288);
             this.profil_groupbox.TabIndex = 40;
@@ -1020,7 +1026,7 @@ namespace borsaProjesi
             this.update_btn.TabIndex = 34;
             this.update_btn.Text = "Güncelle";
             this.update_btn.UseVisualStyleBackColor = false;
-            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
+            this.update_btn.Click += new System.EventHandler(this.Update_btn_Click);
             // 
             // p_emailtxt
             // 
@@ -1197,23 +1203,43 @@ namespace borsaProjesi
             // 
             // bakiye_grpbox
             // 
+            this.bakiye_grpbox.Controls.Add(this.Parabirimi_label);
+            this.bakiye_grpbox.Controls.Add(this.Parabirimleri_combo);
             this.bakiye_grpbox.Controls.Add(this.gecicibakiye2label_txt);
             this.bakiye_grpbox.Controls.Add(this.bakiyelabel2_txt);
-            this.bakiye_grpbox.Controls.Add(this.label15);
-            this.bakiye_grpbox.Controls.Add(this.label14);
+            this.bakiye_grpbox.Controls.Add(this.onaylanmamisbakiye_label);
+            this.bakiye_grpbox.Controls.Add(this.hesapbakiye_label);
             this.bakiye_grpbox.Controls.Add(this.bakiye_ekle_btn);
             this.bakiye_grpbox.Controls.Add(this.bakiyeekle_ext);
             this.bakiye_grpbox.Controls.Add(this.bakiye_ekle_lbl);
-            this.bakiye_grpbox.Location = new System.Drawing.Point(1032, 226);
+            this.bakiye_grpbox.Location = new System.Drawing.Point(848, 248);
             this.bakiye_grpbox.Name = "bakiye_grpbox";
-            this.bakiye_grpbox.Size = new System.Drawing.Size(208, 248);
+            this.bakiye_grpbox.Size = new System.Drawing.Size(398, 288);
             this.bakiye_grpbox.TabIndex = 39;
             this.bakiye_grpbox.TabStop = false;
+            // 
+            // Parabirimi_label
+            // 
+            this.Parabirimi_label.AutoSize = true;
+            this.Parabirimi_label.Location = new System.Drawing.Point(198, 136);
+            this.Parabirimi_label.Name = "Parabirimi_label";
+            this.Parabirimi_label.Size = new System.Drawing.Size(67, 15);
+            this.Parabirimi_label.TabIndex = 30;
+            this.Parabirimi_label.Text = "Para Birimi :";
+            // 
+            // Parabirimleri_combo
+            // 
+            this.Parabirimleri_combo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Parabirimleri_combo.FormattingEnabled = true;
+            this.Parabirimleri_combo.Location = new System.Drawing.Point(271, 133);
+            this.Parabirimleri_combo.Name = "Parabirimleri_combo";
+            this.Parabirimleri_combo.Size = new System.Drawing.Size(121, 23);
+            this.Parabirimleri_combo.TabIndex = 29;
             // 
             // gecicibakiye2label_txt
             // 
             this.gecicibakiye2label_txt.AutoSize = true;
-            this.gecicibakiye2label_txt.Location = new System.Drawing.Point(143, 125);
+            this.gecicibakiye2label_txt.Location = new System.Drawing.Point(129, 115);
             this.gecicibakiye2label_txt.Name = "gecicibakiye2label_txt";
             this.gecicibakiye2label_txt.Size = new System.Drawing.Size(13, 15);
             this.gecicibakiye2label_txt.TabIndex = 28;
@@ -1222,29 +1248,29 @@ namespace borsaProjesi
             // bakiyelabel2_txt
             // 
             this.bakiyelabel2_txt.AutoSize = true;
-            this.bakiyelabel2_txt.Location = new System.Drawing.Point(143, 85);
+            this.bakiyelabel2_txt.Location = new System.Drawing.Point(129, 75);
             this.bakiyelabel2_txt.Name = "bakiyelabel2_txt";
             this.bakiyelabel2_txt.Size = new System.Drawing.Size(13, 15);
             this.bakiyelabel2_txt.TabIndex = 28;
             this.bakiyelabel2_txt.Text = "0";
             // 
-            // label15
+            // onaylanmamisbakiye_label
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(15, 125);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(122, 15);
-            this.label15.TabIndex = 28;
-            this.label15.Text = "Onaylanmamış Bakiye :";
+            this.onaylanmamisbakiye_label.AutoSize = true;
+            this.onaylanmamisbakiye_label.Location = new System.Drawing.Point(1, 115);
+            this.onaylanmamisbakiye_label.Name = "onaylanmamisbakiye_label";
+            this.onaylanmamisbakiye_label.Size = new System.Drawing.Size(122, 15);
+            this.onaylanmamisbakiye_label.TabIndex = 28;
+            this.onaylanmamisbakiye_label.Text = "Onaylanmamış Bakiye :";
             // 
-            // label14
+            // hesapbakiye_label
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(56, 85);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 15);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "Hesap Bakiye :";
+            this.hesapbakiye_label.AutoSize = true;
+            this.hesapbakiye_label.Location = new System.Drawing.Point(42, 75);
+            this.hesapbakiye_label.Name = "hesapbakiye_label";
+            this.hesapbakiye_label.Size = new System.Drawing.Size(81, 15);
+            this.hesapbakiye_label.TabIndex = 28;
+            this.hesapbakiye_label.Text = "Hesap Bakiye :";
             // 
             // bakiye_ekle_btn
             // 
@@ -1258,26 +1284,26 @@ namespace borsaProjesi
             this.bakiye_ekle_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bakiye_ekle_btn.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bakiye_ekle_btn.ForeColor = System.Drawing.SystemColors.Info;
-            this.bakiye_ekle_btn.Location = new System.Drawing.Point(6, 186);
+            this.bakiye_ekle_btn.Location = new System.Drawing.Point(201, 185);
             this.bakiye_ekle_btn.Name = "bakiye_ekle_btn";
-            this.bakiye_ekle_btn.Size = new System.Drawing.Size(183, 51);
+            this.bakiye_ekle_btn.Size = new System.Drawing.Size(191, 51);
             this.bakiye_ekle_btn.TabIndex = 27;
             this.bakiye_ekle_btn.Text = "Bakiye Ekle";
             this.bakiye_ekle_btn.UseVisualStyleBackColor = false;
-            this.bakiye_ekle_btn.Click += new System.EventHandler(this.bakiye_ekle_btn_Click);
+            this.bakiye_ekle_btn.Click += new System.EventHandler(this.Bakiye_ekle_btn_Click);
             // 
             // bakiyeekle_ext
             // 
-            this.bakiyeekle_ext.Location = new System.Drawing.Point(5, 163);
+            this.bakiyeekle_ext.Location = new System.Drawing.Point(201, 165);
             this.bakiyeekle_ext.Name = "bakiyeekle_ext";
-            this.bakiyeekle_ext.Size = new System.Drawing.Size(184, 21);
+            this.bakiyeekle_ext.Size = new System.Drawing.Size(191, 21);
             this.bakiyeekle_ext.TabIndex = 26;
             // 
             // bakiye_ekle_lbl
             // 
             this.bakiye_ekle_lbl.AutoSize = true;
             this.bakiye_ekle_lbl.Font = new System.Drawing.Font("Times New Roman", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bakiye_ekle_lbl.Location = new System.Drawing.Point(-1, 39);
+            this.bakiye_ekle_lbl.Location = new System.Drawing.Point(115, 17);
             this.bakiye_ekle_lbl.Name = "bakiye_ekle_lbl";
             this.bakiye_ekle_lbl.Size = new System.Drawing.Size(190, 31);
             this.bakiye_ekle_lbl.TabIndex = 25;
@@ -1290,13 +1316,13 @@ namespace borsaProjesi
             this.textBox4.Enabled = false;
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.textBox4.Location = new System.Drawing.Point(2, 6);
+            this.textBox4.Location = new System.Drawing.Point(419, 6);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(1271, 58);
+            this.textBox4.Size = new System.Drawing.Size(413, 58);
             this.textBox4.TabIndex = 38;
-            this.textBox4.Text = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Profil Bilgilerim";
+            this.textBox4.Text = "~Profil Bilgilerim~";
             // 
             // textBox3
             // 
@@ -1360,7 +1386,7 @@ namespace borsaProjesi
             this.groupBox2.Controls.Add(this.tumsatislarim_label);
             this.groupBox2.Controls.Add(this.listeleCombo);
             this.groupBox2.Controls.Add(this.nmsattiklarim_btn);
-            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Controls.Add(this.Urunekle_datagrid);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Location = new System.Drawing.Point(26, 151);
             this.groupBox2.Name = "groupBox2";
@@ -1539,45 +1565,45 @@ namespace borsaProjesi
             this.nmsattiklarim_btn.TabIndex = 71;
             this.nmsattiklarim_btn.Text = "Listele";
             this.nmsattiklarim_btn.UseVisualStyleBackColor = true;
-            this.nmsattiklarim_btn.Click += new System.EventHandler(this.nmsattiklarim_btn_Click);
+            this.nmsattiklarim_btn.Click += new System.EventHandler(this.BenimSattiklarim_btn_Click);
             // 
-            // dataGridView2
+            // Urunekle_datagrid
             // 
-            this.dataGridView2.AllowDrop = true;
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.ColumnHeadersVisible = false;
-            this.dataGridView2.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.Location = new System.Drawing.Point(2, 131);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.ShowCellErrors = false;
-            this.dataGridView2.ShowCellToolTips = false;
-            this.dataGridView2.ShowEditingIcon = false;
-            this.dataGridView2.ShowRowErrors = false;
-            this.dataGridView2.Size = new System.Drawing.Size(952, 244);
-            this.dataGridView2.TabIndex = 70;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.Urunekle_datagrid.AllowDrop = true;
+            this.Urunekle_datagrid.AllowUserToOrderColumns = true;
+            this.Urunekle_datagrid.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.Urunekle_datagrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Urunekle_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.Urunekle_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Urunekle_datagrid.ColumnHeadersVisible = false;
+            this.Urunekle_datagrid.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Urunekle_datagrid.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Urunekle_datagrid.Location = new System.Drawing.Point(2, 131);
+            this.Urunekle_datagrid.Name = "Urunekle_datagrid";
+            this.Urunekle_datagrid.ReadOnly = true;
+            this.Urunekle_datagrid.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Urunekle_datagrid.RowHeadersVisible = false;
+            this.Urunekle_datagrid.ShowCellErrors = false;
+            this.Urunekle_datagrid.ShowCellToolTips = false;
+            this.Urunekle_datagrid.ShowEditingIcon = false;
+            this.Urunekle_datagrid.ShowRowErrors = false;
+            this.Urunekle_datagrid.Size = new System.Drawing.Size(952, 244);
+            this.Urunekle_datagrid.TabIndex = 70;
+            this.Urunekle_datagrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Urunekle_datagrid_CellClick);
             // 
             // groupBox1
             // 
@@ -1649,7 +1675,7 @@ namespace borsaProjesi
             this.add_urun_btn.TabIndex = 69;
             this.add_urun_btn.Text = "Urun Ekle";
             this.add_urun_btn.UseVisualStyleBackColor = false;
-            this.add_urun_btn.Click += new System.EventHandler(this.add_urun_btn_Click);
+            this.add_urun_btn.Click += new System.EventHandler(this.Add_urun_btn_Click);
             // 
             // urun_guncelle_btn
             // 
@@ -1669,7 +1695,7 @@ namespace borsaProjesi
             this.urun_guncelle_btn.TabIndex = 68;
             this.urun_guncelle_btn.Text = "Urun Guncelle";
             this.urun_guncelle_btn.UseVisualStyleBackColor = false;
-            this.urun_guncelle_btn.Click += new System.EventHandler(this.urun_guncelle_btn_Click);
+            this.urun_guncelle_btn.Click += new System.EventHandler(this.Urun_guncelle_btn_Click);
             // 
             // textBox2
             // 
@@ -1919,11 +1945,6 @@ namespace borsaProjesi
             this.label2.TabIndex = 53;
             this.label2.Text = "Urun Id :";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // cikis_btn
             // 
             this.cikis_btn.BackColor = System.Drawing.Color.Transparent;
@@ -1939,7 +1960,7 @@ namespace borsaProjesi
             this.cikis_btn.Size = new System.Drawing.Size(58, 52);
             this.cikis_btn.TabIndex = 0;
             this.cikis_btn.UseVisualStyleBackColor = false;
-            this.cikis_btn.Click += new System.EventHandler(this.cikis_btn_Click);
+            this.cikis_btn.Click += new System.EventHandler(this.Cikis_btn_Click);
             // 
             // MainScreen
             // 
@@ -1965,7 +1986,7 @@ namespace borsaProjesi
             ((System.ComponentModel.ISupportInitialize)(this.urunusatanlar_datagrid)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Secereksatinal_datagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kadinimage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erkekimage)).EndInit();
             this.profil_page.ResumeLayout(false);
@@ -1980,7 +2001,7 @@ namespace borsaProjesi
             this.satici_page.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Urunekle_datagrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -2013,8 +2034,8 @@ namespace borsaProjesi
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label onaylanmamisbakiye_label;
+        private System.Windows.Forms.Label hesapbakiye_label;
         private System.Windows.Forms.Label bakiyelabel2_txt;
         private System.Windows.Forms.Label gecicibakiye2label_txt;
         private System.Windows.Forms.Label psoyad_label;
@@ -2027,9 +2048,6 @@ namespace borsaProjesi
         private System.Windows.Forms.Button update_btn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage satici_page;
         private System.Windows.Forms.GroupBox bakiye_grpbox;
         private System.Windows.Forms.GroupBox profil_groupbox;
@@ -2045,7 +2063,7 @@ namespace borsaProjesi
         private System.Windows.Forms.Label tumsatislarim_label;
         private System.Windows.Forms.ComboBox listeleCombo;
         private System.Windows.Forms.Button nmsattiklarim_btn;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView Urunekle_datagrid;
         private System.Windows.Forms.Button add_urun_btn;
         private System.Windows.Forms.Button urun_guncelle_btn;
         private System.Windows.Forms.TextBox textBox2;
@@ -2091,7 +2109,7 @@ namespace borsaProjesi
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox KendiSatislarim_CheckBox;
         private System.Windows.Forms.Button satinal_btn;
         private System.Windows.Forms.Button btn_azalt;
         private System.Windows.Forms.Button btn_arttir;
@@ -2113,7 +2131,7 @@ namespace borsaProjesi
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Secereksatinal_datagrid;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
@@ -2130,5 +2148,10 @@ namespace borsaProjesi
         private System.Windows.Forms.Label adet_lbl;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label Profil_Tarih;
+        private System.Windows.Forms.Label Anasayfa_Tarih;
+        private System.Windows.Forms.ComboBox Parabirimleri_combo;
+        private System.Windows.Forms.Label Parabirimi_label;
     }
 }
