@@ -52,7 +52,7 @@ namespace borsaProjesi
             this.exit_btn.Size = new System.Drawing.Size(51, 49);
             this.exit_btn.TabIndex = 4;
             this.exit_btn.UseVisualStyleBackColor = false;
-            this.exit_btn.Click += new System.EventHandler(this.exit_btn_Click);
+            this.exit_btn.Click += new System.EventHandler(this.Exit_btn_Click);
             // 
             // user
             // 
@@ -69,7 +69,7 @@ namespace borsaProjesi
             this.user.Size = new System.Drawing.Size(111, 85);
             this.user.TabIndex = 4;
             this.user.UseVisualStyleBackColor = false;
-            this.user.Click += new System.EventHandler(this.user_Click);
+            this.user.Click += new System.EventHandler(this.User_Click);
             // 
             // admin
             // 
@@ -86,7 +86,7 @@ namespace borsaProjesi
             this.admin.Size = new System.Drawing.Size(129, 94);
             this.admin.TabIndex = 4;
             this.admin.UseVisualStyleBackColor = false;
-            this.admin.Click += new System.EventHandler(this.admin_Click);
+            this.admin.Click += new System.EventHandler(this.Admin_Click);
             // 
             // label1
             // 

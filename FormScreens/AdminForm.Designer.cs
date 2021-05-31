@@ -29,14 +29,17 @@ namespace borsaProjesi
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
+            this.adminTabControl = new System.Windows.Forms.TabControl();
             this.kullanici_tabpage = new System.Windows.Forms.TabPage();
+            this.Kullanicikontrol_tarih_label = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -45,21 +48,20 @@ namespace borsaProjesi
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.bakiyeonay_label = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
+            this.bakiyeonaybaslik = new System.Windows.Forms.Label();
             this.onayla_btn = new System.Windows.Forms.Button();
-            this.hesapbakiyelabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.gecicibakiye_label = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.parabirimibaslik = new System.Windows.Forms.Label();
+            this.gecicibakiyebaslik = new System.Windows.Forms.Label();
+            this.hesapbakiyebaslik = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.username_txt = new System.Windows.Forms.TextBox();
             this.search_btn = new System.Windows.Forms.Button();
             this.filtre_label = new System.Windows.Forms.Label();
             this.baslik_label = new System.Windows.Forms.Label();
             this.secenekler_combobox = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Kullanicilar_datagridview = new System.Windows.Forms.DataGridView();
             this.uruns_tabpage = new System.Windows.Forms.TabPage();
+            this.Tarihurunkontrol_label = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -77,33 +79,40 @@ namespace borsaProjesi
             this.label8 = new System.Windows.Forms.Label();
             this.urunler_combobox = new System.Windows.Forms.ComboBox();
             this.tumurunler_label = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.Urunler_datagridview = new System.Windows.Forms.DataGridView();
             this.btn_gerii = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.hesapbakiyelabel = new System.Windows.Forms.Label();
+            this.gecicibakiye_label = new System.Windows.Forms.Label();
+            this.parabirimi_label = new System.Windows.Forms.Label();
+            this.bakiyeonay_label = new System.Windows.Forms.Label();
+            this.exchange_rate_btn = new System.Windows.Forms.Button();
+            this.adminTabControl.SuspendLayout();
             this.kullanici_tabpage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kullanicilar_datagridview)).BeginInit();
             this.uruns_tabpage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Urunler_datagridview)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // adminTabControl
             // 
-            this.tabControl1.Controls.Add(this.kullanici_tabpage);
-            this.tabControl1.Controls.Add(this.uruns_tabpage);
-            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tabControl1.Location = new System.Drawing.Point(2, 8);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1327, 585);
-            this.tabControl1.TabIndex = 1;
+            this.adminTabControl.Controls.Add(this.kullanici_tabpage);
+            this.adminTabControl.Controls.Add(this.uruns_tabpage);
+            this.adminTabControl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.adminTabControl.Location = new System.Drawing.Point(2, 8);
+            this.adminTabControl.Name = "adminTabControl";
+            this.adminTabControl.SelectedIndex = 0;
+            this.adminTabControl.Size = new System.Drawing.Size(1416, 585);
+            this.adminTabControl.TabIndex = 1;
             // 
             // kullanici_tabpage
             // 
             this.kullanici_tabpage.BackColor = System.Drawing.Color.Wheat;
+            this.kullanici_tabpage.Controls.Add(this.Kullanicikontrol_tarih_label);
             this.kullanici_tabpage.Controls.Add(this.textBox10);
             this.kullanici_tabpage.Controls.Add(this.textBox11);
             this.kullanici_tabpage.Controls.Add(this.textBox12);
+            this.kullanici_tabpage.Controls.Add(this.textBox22);
+            this.kullanici_tabpage.Controls.Add(this.textBox21);
             this.kullanici_tabpage.Controls.Add(this.textBox20);
             this.kullanici_tabpage.Controls.Add(this.textBox13);
             this.kullanici_tabpage.Controls.Add(this.textBox19);
@@ -113,25 +122,38 @@ namespace borsaProjesi
             this.kullanici_tabpage.Controls.Add(this.textBox17);
             this.kullanici_tabpage.Controls.Add(this.textBox18);
             this.kullanici_tabpage.Controls.Add(this.bakiyeonay_label);
-            this.kullanici_tabpage.Controls.Add(this.label);
+            this.kullanici_tabpage.Controls.Add(this.bakiyeonaybaslik);
+            this.kullanici_tabpage.Controls.Add(this.exchange_rate_btn);
             this.kullanici_tabpage.Controls.Add(this.onayla_btn);
-            this.kullanici_tabpage.Controls.Add(this.hesapbakiyelabel);
-            this.kullanici_tabpage.Controls.Add(this.label5);
+            this.kullanici_tabpage.Controls.Add(this.parabirimi_label);
+            this.kullanici_tabpage.Controls.Add(this.parabirimibaslik);
             this.kullanici_tabpage.Controls.Add(this.gecicibakiye_label);
-            this.kullanici_tabpage.Controls.Add(this.label3);
+            this.kullanici_tabpage.Controls.Add(this.gecicibakiyebaslik);
+            this.kullanici_tabpage.Controls.Add(this.hesapbakiyelabel);
+            this.kullanici_tabpage.Controls.Add(this.hesapbakiyebaslik);
             this.kullanici_tabpage.Controls.Add(this.label1);
             this.kullanici_tabpage.Controls.Add(this.username_txt);
             this.kullanici_tabpage.Controls.Add(this.search_btn);
             this.kullanici_tabpage.Controls.Add(this.filtre_label);
             this.kullanici_tabpage.Controls.Add(this.baslik_label);
             this.kullanici_tabpage.Controls.Add(this.secenekler_combobox);
-            this.kullanici_tabpage.Controls.Add(this.dataGridView1);
+            this.kullanici_tabpage.Controls.Add(this.Kullanicilar_datagridview);
             this.kullanici_tabpage.Location = new System.Drawing.Point(4, 24);
             this.kullanici_tabpage.Name = "kullanici_tabpage";
             this.kullanici_tabpage.Padding = new System.Windows.Forms.Padding(3);
-            this.kullanici_tabpage.Size = new System.Drawing.Size(1319, 557);
+            this.kullanici_tabpage.Size = new System.Drawing.Size(1408, 557);
             this.kullanici_tabpage.TabIndex = 0;
             this.kullanici_tabpage.Text = "Kullanıcı Kontrol";
+            // 
+            // Kullanicikontrol_tarih_label
+            // 
+            this.Kullanicikontrol_tarih_label.AutoSize = true;
+            this.Kullanicikontrol_tarih_label.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Kullanicikontrol_tarih_label.Location = new System.Drawing.Point(1188, 3);
+            this.Kullanicikontrol_tarih_label.Name = "Kullanicikontrol_tarih_label";
+            this.Kullanicikontrol_tarih_label.Size = new System.Drawing.Size(82, 26);
+            this.Kullanicikontrol_tarih_label.TabIndex = 51;
+            this.Kullanicikontrol_tarih_label.Text = "Tarih :";
             // 
             // textBox10
             // 
@@ -175,12 +197,40 @@ namespace borsaProjesi
             this.textBox12.Text = "Telefon No";
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // textBox22
+            // 
+            this.textBox22.BackColor = System.Drawing.Color.LightBlue;
+            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox22.Enabled = false;
+            this.textBox22.Location = new System.Drawing.Point(1278, 201);
+            this.textBox22.Multiline = true;
+            this.textBox22.Name = "textBox22";
+            this.textBox22.ReadOnly = true;
+            this.textBox22.Size = new System.Drawing.Size(106, 21);
+            this.textBox22.TabIndex = 45;
+            this.textBox22.Text = "Son Para Yükleme";
+            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox21
+            // 
+            this.textBox21.BackColor = System.Drawing.Color.LightBlue;
+            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox21.Enabled = false;
+            this.textBox21.Location = new System.Drawing.Point(1164, 201);
+            this.textBox21.Multiline = true;
+            this.textBox21.Name = "textBox21";
+            this.textBox21.ReadOnly = true;
+            this.textBox21.Size = new System.Drawing.Size(106, 21);
+            this.textBox21.TabIndex = 45;
+            this.textBox21.Text = "Para Birimi";
+            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // textBox20
             // 
             this.textBox20.BackColor = System.Drawing.Color.LightBlue;
             this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox20.Enabled = false;
-            this.textBox20.Location = new System.Drawing.Point(1061, 201);
+            this.textBox20.Location = new System.Drawing.Point(1052, 201);
             this.textBox20.Multiline = true;
             this.textBox20.Name = "textBox20";
             this.textBox20.ReadOnly = true;
@@ -288,22 +338,14 @@ namespace borsaProjesi
             this.textBox18.Text = "User Name";
             this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bakiyeonay_label
+            // bakiyeonaybaslik
             // 
-            this.bakiyeonay_label.AutoSize = true;
-            this.bakiyeonay_label.Location = new System.Drawing.Point(824, 150);
-            this.bakiyeonay_label.Name = "bakiyeonay_label";
-            this.bakiyeonay_label.Size = new System.Drawing.Size(0, 15);
-            this.bakiyeonay_label.TabIndex = 40;
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(738, 150);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(80, 15);
-            this.label.TabIndex = 39;
-            this.label.Text = "Bakiye Onayı :";
+            this.bakiyeonaybaslik.AutoSize = true;
+            this.bakiyeonaybaslik.Location = new System.Drawing.Point(311, 155);
+            this.bakiyeonaybaslik.Name = "bakiyeonaybaslik";
+            this.bakiyeonaybaslik.Size = new System.Drawing.Size(80, 15);
+            this.bakiyeonaybaslik.TabIndex = 39;
+            this.bakiyeonaybaslik.Text = "Bakiye Onayı :";
             // 
             // onayla_btn
             // 
@@ -316,52 +358,45 @@ namespace borsaProjesi
             this.onayla_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.onayla_btn.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.onayla_btn.ForeColor = System.Drawing.SystemColors.Info;
-            this.onayla_btn.Location = new System.Drawing.Point(900, 130);
+            this.onayla_btn.Location = new System.Drawing.Point(404, 135);
             this.onayla_btn.Name = "onayla_btn";
             this.onayla_btn.Size = new System.Drawing.Size(146, 55);
             this.onayla_btn.TabIndex = 36;
             this.onayla_btn.Text = "Bakiye Onayla";
             this.onayla_btn.UseVisualStyleBackColor = false;
-            this.onayla_btn.Click += new System.EventHandler(this.onayla_btn_Click);
+            this.onayla_btn.Click += new System.EventHandler(this.Onayla_btn_Click);
             // 
-            // hesapbakiyelabel
+            // parabirimibaslik
             // 
-            this.hesapbakiyelabel.AutoSize = true;
-            this.hesapbakiyelabel.Location = new System.Drawing.Point(1058, 13);
-            this.hesapbakiyelabel.Name = "hesapbakiyelabel";
-            this.hesapbakiyelabel.Size = new System.Drawing.Size(0, 15);
-            this.hesapbakiyelabel.TabIndex = 28;
+            this.parabirimibaslik.AutoSize = true;
+            this.parabirimibaslik.Location = new System.Drawing.Point(550, 17);
+            this.parabirimibaslik.Name = "parabirimibaslik";
+            this.parabirimibaslik.Size = new System.Drawing.Size(153, 15);
+            this.parabirimibaslik.TabIndex = 27;
+            this.parabirimibaslik.Text = "Yüklemek istediği para birimi :";
             // 
-            // label5
+            // gecicibakiyebaslik
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(909, 45);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 15);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Onay Bekleyen Bakiyesi :";
+            this.gecicibakiyebaslik.AutoSize = true;
+            this.gecicibakiyebaslik.Location = new System.Drawing.Point(175, 117);
+            this.gecicibakiyebaslik.Name = "gecicibakiyebaslik";
+            this.gecicibakiyebaslik.Size = new System.Drawing.Size(133, 15);
+            this.gecicibakiyebaslik.TabIndex = 27;
+            this.gecicibakiyebaslik.Text = "Onay Bekleyen Bakiyesi :";
             // 
-            // gecicibakiye_label
+            // hesapbakiyebaslik
             // 
-            this.gecicibakiye_label.AutoSize = true;
-            this.gecicibakiye_label.Location = new System.Drawing.Point(1058, 45);
-            this.gecicibakiye_label.Name = "gecicibakiye_label";
-            this.gecicibakiye_label.Size = new System.Drawing.Size(0, 15);
-            this.gecicibakiye_label.TabIndex = 35;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(953, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 15);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Hesap Bakiyesi :";
+            this.hesapbakiyebaslik.AutoSize = true;
+            this.hesapbakiyebaslik.Location = new System.Drawing.Point(219, 78);
+            this.hesapbakiyebaslik.Name = "hesapbakiyebaslik";
+            this.hesapbakiyebaslik.Size = new System.Drawing.Size(89, 15);
+            this.hesapbakiyebaslik.TabIndex = 26;
+            this.hesapbakiyebaslik.Text = "Hesap Bakiyesi :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(750, 17);
+            this.label1.Location = new System.Drawing.Point(241, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 24;
@@ -369,7 +404,7 @@ namespace borsaProjesi
             // 
             // username_txt
             // 
-            this.username_txt.Location = new System.Drawing.Point(823, 13);
+            this.username_txt.Location = new System.Drawing.Point(314, 32);
             this.username_txt.Name = "username_txt";
             this.username_txt.ReadOnly = true;
             this.username_txt.Size = new System.Drawing.Size(90, 21);
@@ -386,19 +421,19 @@ namespace borsaProjesi
             this.search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search_btn.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.search_btn.ForeColor = System.Drawing.SystemColors.Info;
-            this.search_btn.Location = new System.Drawing.Point(1123, 130);
+            this.search_btn.Location = new System.Drawing.Point(1207, 135);
             this.search_btn.Name = "search_btn";
             this.search_btn.Size = new System.Drawing.Size(177, 55);
             this.search_btn.TabIndex = 15;
             this.search_btn.Text = "Filtrele";
             this.search_btn.UseVisualStyleBackColor = false;
-            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
+            this.search_btn.Click += new System.EventHandler(this.Search_btn_Click);
             // 
             // filtre_label
             // 
             this.filtre_label.AutoSize = true;
             this.filtre_label.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.filtre_label.Location = new System.Drawing.Point(1151, 3);
+            this.filtre_label.Location = new System.Drawing.Point(1235, 78);
             this.filtre_label.Name = "filtre_label";
             this.filtre_label.Size = new System.Drawing.Size(112, 36);
             this.filtre_label.TabIndex = 14;
@@ -419,18 +454,15 @@ namespace borsaProjesi
             // 
             this.secenekler_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.secenekler_combobox.FormattingEnabled = true;
-            this.secenekler_combobox.Items.AddRange(new object[] {
-            "Onay Bekleyen Bakiyeler",
-            "Tüm Kullanıcılar"});
-            this.secenekler_combobox.Location = new System.Drawing.Point(1123, 42);
+            this.secenekler_combobox.Location = new System.Drawing.Point(1207, 117);
             this.secenekler_combobox.Name = "secenekler_combobox";
             this.secenekler_combobox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.secenekler_combobox.Size = new System.Drawing.Size(177, 23);
             this.secenekler_combobox.TabIndex = 12;
             // 
-            // dataGridView1
+            // Kullanicilar_datagridview
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Kullanicilar_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -438,16 +470,17 @@ namespace borsaProjesi
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 228);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1156, 314);
-            this.dataGridView1.TabIndex = 11;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.Kullanicilar_datagridview.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Kullanicilar_datagridview.Location = new System.Drawing.Point(20, 228);
+            this.Kullanicilar_datagridview.Name = "Kullanicilar_datagridview";
+            this.Kullanicilar_datagridview.Size = new System.Drawing.Size(1364, 314);
+            this.Kullanicilar_datagridview.TabIndex = 11;
+            this.Kullanicilar_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kullanicilar_datagridview_CellClick);
             // 
             // uruns_tabpage
             // 
             this.uruns_tabpage.BackColor = System.Drawing.Color.Wheat;
+            this.uruns_tabpage.Controls.Add(this.Tarihurunkontrol_label);
             this.uruns_tabpage.Controls.Add(this.textBox9);
             this.uruns_tabpage.Controls.Add(this.textBox6);
             this.uruns_tabpage.Controls.Add(this.textBox8);
@@ -465,13 +498,23 @@ namespace borsaProjesi
             this.uruns_tabpage.Controls.Add(this.label8);
             this.uruns_tabpage.Controls.Add(this.urunler_combobox);
             this.uruns_tabpage.Controls.Add(this.tumurunler_label);
-            this.uruns_tabpage.Controls.Add(this.dataGridView2);
+            this.uruns_tabpage.Controls.Add(this.Urunler_datagridview);
             this.uruns_tabpage.Location = new System.Drawing.Point(4, 24);
             this.uruns_tabpage.Name = "uruns_tabpage";
             this.uruns_tabpage.Padding = new System.Windows.Forms.Padding(3);
-            this.uruns_tabpage.Size = new System.Drawing.Size(1319, 557);
+            this.uruns_tabpage.Size = new System.Drawing.Size(1408, 557);
             this.uruns_tabpage.TabIndex = 1;
             this.uruns_tabpage.Text = "Ürün Kontrol";
+            // 
+            // Tarihurunkontrol_label
+            // 
+            this.Tarihurunkontrol_label.AutoSize = true;
+            this.Tarihurunkontrol_label.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Tarihurunkontrol_label.Location = new System.Drawing.Point(1159, 6);
+            this.Tarihurunkontrol_label.Name = "Tarihurunkontrol_label";
+            this.Tarihurunkontrol_label.Size = new System.Drawing.Size(82, 26);
+            this.Tarihurunkontrol_label.TabIndex = 43;
+            this.Tarihurunkontrol_label.Text = "Tarih :";
             // 
             // textBox9
             // 
@@ -647,7 +690,7 @@ namespace borsaProjesi
             this.urunonayla_btn.TabIndex = 19;
             this.urunonayla_btn.Text = "Urun Onayla";
             this.urunonayla_btn.UseVisualStyleBackColor = false;
-            this.urunonayla_btn.Click += new System.EventHandler(this.urunonayla_btn_Click);
+            this.urunonayla_btn.Click += new System.EventHandler(this.Urunonayla_btn_Click);
             // 
             // urunlerlistele_btn
             // 
@@ -666,7 +709,7 @@ namespace borsaProjesi
             this.urunlerlistele_btn.TabIndex = 18;
             this.urunlerlistele_btn.Text = "ara";
             this.urunlerlistele_btn.UseVisualStyleBackColor = false;
-            this.urunlerlistele_btn.Click += new System.EventHandler(this.urunlerlistele_btn_Click);
+            this.urunlerlistele_btn.Click += new System.EventHandler(this.Urunlerlistele_btn_Click);
             // 
             // label8
             // 
@@ -682,10 +725,6 @@ namespace borsaProjesi
             // 
             this.urunler_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.urunler_combobox.FormattingEnabled = true;
-            this.urunler_combobox.Items.AddRange(new object[] {
-            "Onaylanan Ürünler",
-            "Onay Bekleyen Ürünler",
-            "Tüm Ürünler"});
             this.urunler_combobox.Location = new System.Drawing.Point(775, 123);
             this.urunler_combobox.Name = "urunler_combobox";
             this.urunler_combobox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -702,9 +741,9 @@ namespace borsaProjesi
             this.tumurunler_label.TabIndex = 14;
             this.tumurunler_label.Text = "Tüm Ürünler";
             // 
-            // dataGridView2
+            // Urunler_datagridview
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Urunler_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -712,12 +751,12 @@ namespace borsaProjesi
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.Location = new System.Drawing.Point(20, 228);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(973, 322);
-            this.dataGridView2.TabIndex = 12;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.Urunler_datagridview.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Urunler_datagridview.Location = new System.Drawing.Point(20, 228);
+            this.Urunler_datagridview.Name = "Urunler_datagridview";
+            this.Urunler_datagridview.Size = new System.Drawing.Size(973, 322);
+            this.Urunler_datagridview.TabIndex = 12;
+            this.Urunler_datagridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Urunler_datagridview_CellClick);
             // 
             // btn_gerii
             // 
@@ -729,54 +768,102 @@ namespace borsaProjesi
             this.btn_gerii.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_gerii.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_gerii.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_gerii.Location = new System.Drawing.Point(1337, 12);
+            this.btn_gerii.Location = new System.Drawing.Point(1437, 12);
             this.btn_gerii.Name = "btn_gerii";
             this.btn_gerii.Size = new System.Drawing.Size(58, 52);
             this.btn_gerii.TabIndex = 2;
             this.btn_gerii.UseVisualStyleBackColor = false;
-            this.btn_gerii.Click += new System.EventHandler(this.btn_gerii_Click);
+            this.btn_gerii.Click += new System.EventHandler(this.Btn_gerii_Click);
+            // 
+            // hesapbakiyelabel
+            // 
+            this.hesapbakiyelabel.AutoSize = true;
+            this.hesapbakiyelabel.Location = new System.Drawing.Point(550, 32);
+            this.hesapbakiyelabel.Name = "hesapbakiyelabel";
+            this.hesapbakiyelabel.Size = new System.Drawing.Size(0, 15);
+            this.hesapbakiyelabel.TabIndex = 26;
+            // 
+            // gecicibakiye_label
+            // 
+            this.gecicibakiye_label.AutoSize = true;
+            this.gecicibakiye_label.Location = new System.Drawing.Point(550, 64);
+            this.gecicibakiye_label.Name = "gecicibakiye_label";
+            this.gecicibakiye_label.Size = new System.Drawing.Size(0, 15);
+            this.gecicibakiye_label.TabIndex = 27;
+            // 
+            // parabirimi_label
+            // 
+            this.parabirimi_label.AutoSize = true;
+            this.parabirimi_label.Location = new System.Drawing.Point(550, 99);
+            this.parabirimi_label.Name = "parabirimi_label";
+            this.parabirimi_label.Size = new System.Drawing.Size(0, 15);
+            this.parabirimi_label.TabIndex = 27;
+            // 
+            // bakiyeonay_label
+            // 
+            this.bakiyeonay_label.AutoSize = true;
+            this.bakiyeonay_label.Location = new System.Drawing.Point(550, 135);
+            this.bakiyeonay_label.Name = "bakiyeonay_label";
+            this.bakiyeonay_label.Size = new System.Drawing.Size(0, 15);
+            this.bakiyeonay_label.TabIndex = 39;
+            // 
+            // exchange_rate_btn
+            // 
+            this.exchange_rate_btn.BackColor = System.Drawing.Color.Transparent;
+            this.exchange_rate_btn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exchange_rate_btn.BackgroundImage")));
+            this.exchange_rate_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exchange_rate_btn.FlatAppearance.BorderSize = 0;
+            this.exchange_rate_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.exchange_rate_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.exchange_rate_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exchange_rate_btn.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.exchange_rate_btn.ForeColor = System.Drawing.SystemColors.Info;
+            this.exchange_rate_btn.Location = new System.Drawing.Point(708, 135);
+            this.exchange_rate_btn.Name = "exchange_rate_btn";
+            this.exchange_rate_btn.Size = new System.Drawing.Size(146, 55);
+            this.exchange_rate_btn.TabIndex = 36;
+            this.exchange_rate_btn.Text = "Para Dönüştür";
+            this.exchange_rate_btn.UseVisualStyleBackColor = false;
+            this.exchange_rate_btn.Visible = false;
+            this.exchange_rate_btn.Click += new System.EventHandler(this.Exchange_rate_btn_Click);
             // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1407, 594);
+            this.ClientSize = new System.Drawing.Size(1507, 594);
             this.Controls.Add(this.btn_gerii);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.adminTabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.adminTabControl.ResumeLayout(false);
             this.kullanici_tabpage.ResumeLayout(false);
             this.kullanici_tabpage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kullanicilar_datagridview)).EndInit();
             this.uruns_tabpage.ResumeLayout(false);
             this.uruns_tabpage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Urunler_datagridview)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl adminTabControl;
         private System.Windows.Forms.TabPage kullanici_tabpage;
-        private System.Windows.Forms.Label bakiyeonay_label;
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label bakiyeonaybaslik;
         private System.Windows.Forms.Button onayla_btn;
-        private System.Windows.Forms.Label hesapbakiyelabel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label gecicibakiye_label;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label gecicibakiyebaslik;
+        private System.Windows.Forms.Label hesapbakiyebaslik;
         private System.Windows.Forms.Button search_btn;
         private System.Windows.Forms.Label filtre_label;
         private System.Windows.Forms.Label baslik_label;
         private System.Windows.Forms.ComboBox secenekler_combobox;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Kullanicilar_datagridview;
         private System.Windows.Forms.TabPage uruns_tabpage;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView Urunler_datagridview;
         private System.Windows.Forms.Label tumurunler_label;
         private System.Windows.Forms.Button urunlerlistele_btn;
         private System.Windows.Forms.Label label8;
@@ -808,5 +895,15 @@ namespace borsaProjesi
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Button btn_gerii;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Label Kullanicikontrol_tarih_label;
+        private System.Windows.Forms.Label Tarihurunkontrol_label;
+        private System.Windows.Forms.Label parabirimibaslik;
+        private System.Windows.Forms.Label bakiyeonay_label;
+        private System.Windows.Forms.Label parabirimi_label;
+        private System.Windows.Forms.Label gecicibakiye_label;
+        private System.Windows.Forms.Label hesapbakiyelabel;
+        private System.Windows.Forms.Button exchange_rate_btn;
     }
 }

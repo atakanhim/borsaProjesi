@@ -19,9 +19,9 @@ namespace borsaProjesi
         public string Eposta { get; set; }
         public string Unvan { get; set; }
         public double Bakiye { get; set; }
-        public double geciciBakiye { get; set; }
-        public string bakiyeOnay { get; set; }
-        public string cinsiyet { get; set; }
+        public double GeciciBakiye { get; set; }
+        public string BakiyeOnay { get; set; }
+        public string Cinsiyet { get; set; }
 
         public CurrentUser()
         {
