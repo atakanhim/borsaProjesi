@@ -151,19 +151,21 @@ namespace borsaProjesi
         {
             if (SayiMi(kacadetalmak_txt.Text))
             {
-                int toplampara = Singleton.Instance.islem.GetToplamPara(urunler_listbox.SelectedItem.ToString(), Convert.ToInt32(kacadetalmak_txt.Text));
-                int toplamadet = Singleton.Instance.islem.GetUrunToplamAdet(urunler_listbox.SelectedItem.ToString());
+                double toplampara = Singleton.Instance.islem.GetToplamPara(urunler_listbox.SelectedItem.ToString(), Convert.ToInt32(kacadetalmak_txt.Text));
+                double muhasebeciHarac = toplampara / 100;
+                double olmasiGerekenBakiye = toplampara + muhasebeciHarac;
+                double toplamadet = Singleton.Instance.islem.GetUrunToplamAdet(urunler_listbox.SelectedItem.ToString());
                 if (Convert.ToInt32(kacadetalmak_txt.Text) > toplamadet)
                 {
                     MessageBox.Show("Magazının toplam stogunda bu kadar ürün yok,girebileceginiz maksimum deger:" + toplamadet + " " + adet_lbl.Text + " dir");
                 }
-                else if (Singleton.Instance.currentUser.Bakiye < toplampara)
+                else if (Singleton.Instance.currentUser.Bakiye < olmasiGerekenBakiye)
                 {
                     MessageBox.Show("Bu üründen " + kacadetalmak_txt.Text + " " + adet_lbl.Text + " almak için yeterli bakiyeniz bulunmamaktaıdır", "Bakiye Yetmiyorr");
                 }
-                else if (Singleton.Instance.currentUser.Bakiye >= toplampara)
+                else if (Singleton.Instance.currentUser.Bakiye >= olmasiGerekenBakiye)
                 {
-                    Singleton.Instance.islem.Otosatinal(urunler_listbox.SelectedItem.ToString(), Convert.ToInt32(kacadetalmak_txt.Text));
+                    Singleton.Instance.islem.Otosatinal(urunler_listbox.SelectedItem.ToString(), Convert.ToInt32(kacadetalmak_txt.Text),muhasebeciHarac);
                 }
 
             }
@@ -209,7 +211,9 @@ namespace borsaProjesi
 
         private void Satinal_btn_Click(object sender, EventArgs e)
         {
-
+            double toplampara = Convert.ToDouble(odenecekttutar_label.Text);
+            double muhasebeci = Convert.ToDouble(odenecekttutar_label.Text)/100;
+            double muhasebeciVeToplampara =  toplampara+muhasebeci;
             string x;
             if (urunsaticilabel.Text == Singleton.Instance.currentUser.UserName)
             {
@@ -217,16 +221,16 @@ namespace borsaProjesi
             }
             else
             {
-                DialogResult eminmisin = MessageBox.Show("Bu ürünü almak için istedigine eminmisin Toplam Fiyat:" + odenecekttutar_label.Text + " ₺", "Emin misin ?", MessageBoxButtons.YesNo);
+                DialogResult eminmisin = MessageBox.Show("Bu ürünü almak için istedigine eminmisin Toplam Fiyat:" + muhasebeciVeToplampara.ToString() + " ₺", "Emin misin ?", MessageBoxButtons.YesNo);
                 if (eminmisin == DialogResult.Yes)
                 {
-                    if (Convert.ToInt32(odenecekttutar_label.Text) > Singleton.Instance.currentUser.Bakiye)
+                    if (muhasebeciVeToplampara > Singleton.Instance.currentUser.Bakiye)
                     {
-                        int eksikbakiye = Convert.ToInt32(odenecekttutar_label.Text) - Convert.ToInt32(Singleton.Instance.currentUser.Bakiye);
+                        double eksikbakiye = muhasebeciVeToplampara - Convert.ToInt32(Singleton.Instance.currentUser.Bakiye) ;
                         DialogResult dialogResult = MessageBox.Show("Bu ürünü almak için bakiyeniz yetersiz bu ürün için eksik bakiyeniz :" + eksikbakiye.ToString() + "₺ dir. Eksik Bakiyeyi Yüklemek istermisiniz", "Bakiye Yetersizliği !!!", MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.Yes)
                         {
-                            if (Singleton.Instance.currentUser.GeciciBakiye > 0)
+                            if (Singleton.Instance.currentUser.BakiyeOnay == "Onaylanmadı")
                             {
                                 MessageBox.Show("Henüz onaylanmamış bakiyeniz oldugu için bakiye yükleme işlemi gerçekleştirilemiyor", "Bakiye Yükleme Hata");
                             }
@@ -236,11 +240,10 @@ namespace borsaProjesi
                             }
                         }
                     }
-                    else if (Convert.ToInt32(odenecekttutar_label.Text) > 0 && adetsayisi_label.Text != "0")
+                    else if (muhasebeciVeToplampara > 0 && adetsayisi_label.Text != "0")
                     {
                         x = adetarttir_label.Text + " " + urunbirimilabel.Text + " " + urunadilabel.Text + " vermiş oldugunuz sipariş yola çıkmıştır en yakın zamanda adresinizde olacaktır  ADRES:  " + Singleton.Instance.currentUser.Adres;
-                        Singleton.Instance.islem.UrunSatinAl(barkodno_label.Text, urunsaticilabel.Text, Convert.ToInt32(adetarttir_label.Text), Convert.ToInt32(odenecekttutar_label.Text), x);
-
+                        Singleton.Instance.islem.UrunSatinAl(barkodno_label.Text, urunsaticilabel.Text, Convert.ToInt32(adetarttir_label.Text), Convert.ToInt32(odenecekttutar_label.Text), x, muhasebeci);
                     }
                     else if (adetsayisi_label.Text == "0")
                     {
@@ -268,7 +271,7 @@ namespace borsaProjesi
             }
             else
             {
-                if (Singleton.Instance.currentUser.GeciciBakiye == 0)
+                if (Singleton.Instance.currentUser.BakiyeOnay == "Onaylanmadı")
                 {
                     Singleton.Instance.islem.GecicibakiyeGuncelle(Convert.ToInt32(bakiyeekle_ext.Text),Parabirimleri_combo.Text);
                     ParabirimiComboDoldur();

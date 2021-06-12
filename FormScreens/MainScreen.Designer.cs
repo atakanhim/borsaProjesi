@@ -30,9 +30,9 @@ namespace borsaProjesi
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.masterTabControl = new System.Windows.Forms.TabControl();
             this.anasayfa_page = new System.Windows.Forms.TabPage();
             this.Anasayfa_Tarih = new System.Windows.Forms.Label();
@@ -627,7 +627,7 @@ namespace borsaProjesi
             // urunbirimilabel
             // 
             this.urunbirimilabel.AutoSize = true;
-            this.urunbirimilabel.Location = new System.Drawing.Point(1113, 128);
+            this.urunbirimilabel.Location = new System.Drawing.Point(1125, 128);
             this.urunbirimilabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.urunbirimilabel.Name = "urunbirimilabel";
             this.urunbirimilabel.Size = new System.Drawing.Size(13, 15);
@@ -637,7 +637,7 @@ namespace borsaProjesi
             // adetarttir_label
             // 
             this.adetarttir_label.AutoSize = true;
-            this.adetarttir_label.Location = new System.Drawing.Point(1093, 128);
+            this.adetarttir_label.Location = new System.Drawing.Point(1101, 128);
             this.adetarttir_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.adetarttir_label.Name = "adetarttir_label";
             this.adetarttir_label.Size = new System.Drawing.Size(13, 15);
@@ -680,7 +680,7 @@ namespace borsaProjesi
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(1125, 195);
+            this.label32.Location = new System.Drawing.Point(1170, 195);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(13, 15);
@@ -700,7 +700,7 @@ namespace borsaProjesi
             // odenecekttutar_label
             // 
             this.odenecekttutar_label.AutoSize = true;
-            this.odenecekttutar_label.Location = new System.Drawing.Point(1093, 195);
+            this.odenecekttutar_label.Location = new System.Drawing.Point(1118, 195);
             this.odenecekttutar_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.odenecekttutar_label.Name = "odenecekttutar_label";
             this.odenecekttutar_label.Size = new System.Drawing.Size(13, 15);
@@ -720,7 +720,7 @@ namespace borsaProjesi
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(1021, 195);
+            this.label30.Location = new System.Drawing.Point(1016, 195);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(90, 15);
@@ -730,7 +730,7 @@ namespace borsaProjesi
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(1057, 154);
+            this.label28.Location = new System.Drawing.Point(1032, 154);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(42, 15);
@@ -740,7 +740,7 @@ namespace borsaProjesi
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(1008, 128);
+            this.label27.Location = new System.Drawing.Point(990, 128);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(107, 15);
@@ -760,7 +760,7 @@ namespace borsaProjesi
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(1039, 106);
+            this.label26.Location = new System.Drawing.Point(1008, 106);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(66, 15);
@@ -834,14 +834,14 @@ namespace borsaProjesi
             this.Secereksatinal_datagrid.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.Secereksatinal_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Secereksatinal_datagrid.ColumnHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Secereksatinal_datagrid.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Secereksatinal_datagrid.DefaultCellStyle = dataGridViewCellStyle7;
             this.Secereksatinal_datagrid.Location = new System.Drawing.Point(4, 71);
             this.Secereksatinal_datagrid.Margin = new System.Windows.Forms.Padding(2);
             this.Secereksatinal_datagrid.Name = "Secereksatinal_datagrid";
@@ -1691,25 +1691,25 @@ namespace borsaProjesi
             this.Urunekle_datagrid.AllowUserToOrderColumns = true;
             this.Urunekle_datagrid.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.Urunekle_datagrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Urunekle_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Urunekle_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.Urunekle_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Urunekle_datagrid.ColumnHeadersVisible = false;
             this.Urunekle_datagrid.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Urunekle_datagrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Indigo;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Urunekle_datagrid.DefaultCellStyle = dataGridViewCellStyle9;
             this.Urunekle_datagrid.Location = new System.Drawing.Point(2, 131);
             this.Urunekle_datagrid.Name = "Urunekle_datagrid";
             this.Urunekle_datagrid.ReadOnly = true;

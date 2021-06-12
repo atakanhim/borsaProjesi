@@ -20,6 +20,7 @@ namespace borsaProjesi
 
         private void Kullanici_ekle_btn_Click(object sender, EventArgs e)
         {
+        
             string cinsiyet = "";
 
             if (username_txt.Text == "" || password_txt.Text == "" || adres_txt.Text == "" || ad_txt.Text == "" || soyad_txt.Text == "" || tc_txt.Text == "" || telefon_txt.Text == "" || adres_txt.Text == "" || email_txt.Text == "")

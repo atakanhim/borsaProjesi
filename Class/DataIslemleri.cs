@@ -23,30 +23,35 @@ namespace borsaProjesi
             OleDbDataReader ReadSiparislerData = ReadDatabase("Select * from Siparisler Where SiparisDurumu='" + "Aranıyor" + "' ORDER BY siparisOlusturulmaTarihi ASC ");
             while (ReadSiparislerData.Read())
             {
-                int siparisFiyati = Convert.ToInt32(ReadSiparislerData["KacParayaAlacak"].ToString());
+                double siparisFiyati = Convert.ToDouble(ReadSiparislerData["KacParayaAlacak"].ToString());
                 int adetSayisi = Convert.ToInt32(ReadSiparislerData["KacAdetAlacak"].ToString());
-                int toplamFiyat = siparisFiyati * adetSayisi;
-                int userHesapbakiyesi = 0;
+                double toplamFiyat = siparisFiyati * adetSayisi;
+                double muhasebeciHarac = toplamFiyat / 100;
+                double toplamCekilecekPara = toplamFiyat + muhasebeciHarac;
+                double userHesapbakiyesi = 0;
                 OleDbDataReader ReadUserBilgileri = ReadDatabase("Select * from Users Where UserName='" + ReadSiparislerData["siparisVerenKisi"].ToString()+ "'");
                 if (ReadUserBilgileri.Read())// kullanıcının parası varmı yoksa hiç denemesin
                     userHesapbakiyesi = Convert.ToInt32(ReadUserBilgileri["hesapBakiye"].ToString());
 
-                if (userHesapbakiyesi >= toplamFiyat) { 
+                if (userHesapbakiyesi >= toplamCekilecekPara) { 
 
                     OleDbDataReader ReadUrunlerData = ReadDatabase("Select * from Uruns Where UrunName='" + ReadSiparislerData["urunAdi"].ToString() + "' AND UrunMiktari>0 AND urunOnay='"+ "Onaylandı" + "' AND NOT UrunSatici='" + ReadSiparislerData["siparisVerenKisi"].ToString() + "' ORDER BY UrunFiyati ASC");
                     if (ReadUrunlerData.Read())
                     {
                         int urunSayisi = Convert.ToInt32(ReadUrunlerData["UrunMiktari"].ToString());
-                        int urunFiyati = Convert.ToInt32(ReadUrunlerData["UrunFiyati"].ToString());
+                        double urunFiyati = Convert.ToInt32(ReadUrunlerData["UrunFiyati"].ToString());
                         if (siparisFiyati == urunFiyati && adetSayisi <= urunSayisi)//varsa
                         {
-                            // para cegildi
-                            ParaCekWithUserName(toplamFiyat , ReadSiparislerData["siparisVerenKisi"].ToString());
+                            // para cegildi + komisyonda çekildi
+                            ParaCekWithUserName(toplamCekilecekPara, ReadSiparislerData["siparisVerenKisi"].ToString());
 
                             // para saticinin hesaba geciyor
-                            int newBakiye = Convert.ToInt32(ReadUserBilgileri["hesapBakiye"].ToString());
+                            double newBakiye = Convert.ToDouble(ReadUserBilgileri["hesapBakiye"].ToString());
                             newBakiye += toplamFiyat;
                             AddOrUpdateDatabase("update Users set hesapBakiye='" + newBakiye + "' where UserName='" + ReadUrunlerData["UrunSatici"] + "'");
+
+                            //Muhasebeci parasi yatirildi
+                            MuhasebeHarac(muhasebeciHarac);
 
                             // urun sayisi azaltılıyor
                             int newAdetSayisi = Convert.ToInt32(ReadUrunlerData["UrunMiktari"].ToString());
@@ -100,13 +105,24 @@ namespace borsaProjesi
         }
         // final kodları**********************
         // Siparis olusturuluyorrr
-
+        public void MuhasebeHarac(double odenecekMiktar)
+        {
+            OleDbDataReader ReadData;
+            ReadData = ReadDatabase("Select * from Muhasebeci WHERE ad='" + "Ferhat" + "'");
+            if (ReadData.Read())
+            {
+                double x = Convert.ToDouble(ReadData["hesapBakiyesi"].ToString());
+                x += odenecekMiktar;
+                AddOrUpdateDatabase("update Muhasebeci set hesapBakiyesi='" + x + "' where ad='" + "Ferhat" + "'");
+            }
+        }
         public void SiparisControl(string urunAdi,string kacadet,string kacpara)// varmı yokmu
         {
             int urunFiyat = 0, urunAdet = 0;
             string saticiAdi = "", barkodNo = "";
-            int toplamfiyat = Convert.ToInt32(kacadet) * Convert.ToInt32(kacpara);
-            DialogResult eminmisin = MessageBox.Show("Urun Adı : "+urunAdi+"\nUrun Adedi : "+kacadet+"\nUrun Birim Fiyati : "+kacpara+"\nToplam fiyat : "+toplamfiyat.ToString() + "\n\n\n Uyarı ! : Belirlediğiniz fiyata ürün konana kadar hesabınızdan para çekilmeyecektir", "Siparişi onaylıyormusunuz ?", MessageBoxButtons.YesNo);
+            double toplamfiyat = Convert.ToDouble(kacadet) * Convert.ToDouble(kacpara);
+            double muhasebeciparasi = toplamfiyat / 100;
+            DialogResult eminmisin = MessageBox.Show("Urun Adı : "+urunAdi+"\nUrun Adedi : "+kacadet+"\nUrun Birim Fiyati : "+kacpara+"\nToplam fiyat : "+toplamfiyat.ToString() + "\nMuhasebeci Komisyonu icinde Kesilecek tutar : " + muhasebeciparasi.ToString() + " ₺ dir\n\n\n Uyarı ! : Belirlediğiniz fiyata ürün konana kadar hesabınızdan para çekilmeyecektir", "Siparişi onaylıyormusunuz ?", MessageBoxButtons.YesNo);
             if (eminmisin == DialogResult.Yes)
             {
                 // kullanıcının girdigi fiyat tan varmı yokmu kontrol
@@ -129,7 +145,7 @@ namespace borsaProjesi
                 {
                     // istediği ürünler zaten var
                     // satin al
-                    UrunSatinAl(barkodNo,saticiAdi,Convert.ToInt32(kacadet),toplamfiyat, "İstediginiz fiyattan istediginiz ürünler var Satın alınıyor");//alınıyor
+                    UrunSatinAl(barkodNo,saticiAdi,Convert.ToInt32(kacadet),toplamfiyat, "İstediginiz fiyattan istediginiz ürünler var Satın alınıyor", muhasebeciparasi);//alınıyor
                 }
                 else
                 {
@@ -191,36 +207,36 @@ namespace borsaProjesi
             return toplamPara;
         }
         // para current user dan çekiliyor
-        public void ParaCek(int toplamfiyat)
+        public void ParaCek(double toplamfiyat)
         {
             OleDbDataReader ReadData;
 
             ReadData = ReadDatabase("Select * from Users WHERE UserName='" + Singleton.Instance.currentUser.UserName + "'");
             if (ReadData.Read())
             {
-                int x = Convert.ToInt32(ReadData["hesapBakiye"].ToString());
+                double x = Convert.ToDouble(ReadData["hesapBakiye"].ToString());
                 x -= toplamfiyat;
                 AddOrUpdateDatabase("update Users set hesapBakiye='" + x + "' where UserName='" + Singleton.Instance.currentUser.UserName + "'");
             }
         }
         // Belirli kullanıcıdan para çekiliyor
-        public void ParaCekWithUserName(int toplamfiyat,string userName)
+        public void ParaCekWithUserName(double toplamfiyat,string userName)
         {
             OleDbDataReader ReadData;
 
             ReadData = ReadDatabase("Select * from Users WHERE UserName='" + userName + "'");
             if (ReadData.Read())
             {
-                int x = Convert.ToInt32(ReadData["hesapBakiye"].ToString());
+                double x = Convert.ToDouble(ReadData["hesapBakiye"].ToString());
                 x -= toplamfiyat;
                 AddOrUpdateDatabase("update Users set hesapBakiye='" + x + "' where UserName='" + userName + "'");
             }
         }
         // tüm satın alma işlemi
-        public void Otosatinal(string urunname, int miktar)
+        public void Otosatinal(string urunname, int miktar,double muhasebeTutar)
         {
             int miktar2 = miktar;
-            int toplamPara = 0;
+            double toplamPara = 0;
             string mesaj = "";
             string urunbirimi = "";
 
@@ -246,15 +262,15 @@ namespace borsaProjesi
                 {
                     sattigimmiktar = miktar;
                     miktar -= sattigimmiktar;
-                    toplamPara += sattigimmiktar * Convert.ToInt32(ReadData["UrunFiyati"].ToString());
-                    ParaCek(sattigimmiktar * Convert.ToInt32(ReadData["UrunFiyati"].ToString()));
+                    toplamPara += sattigimmiktar * Convert.ToDouble(ReadData["UrunFiyati"].ToString());
+                    ParaCek(sattigimmiktar * Convert.ToDouble(ReadData["UrunFiyati"].ToString()));
                     Satinal(ReadData, sattigimmiktar);
                     mesaj += sattigimmiktar + " " + urunbirimi + " --> Birim fiyati :" + Convert.ToInt32(ReadData["UrunFiyati"].ToString()) + " ₺ --> Toplam Fiyat :" + (sattigimmiktar * Convert.ToInt32(ReadData["UrunFiyati"].ToString())).ToString() + " ₺ den alındı .\n";
                 }
-
-
             }
-            string topMesaj = "Toplamda " + miktar2.ToString() + " " + urunbirimi + " " + urunname + " Aldınız Toplam Fiyat: " + toplamPara.ToString() + " ₺ dir. \n\n";
+            ParaCek(muhasebeTutar);//muhasebe tutarı da çekiliyor en son olarak
+            MuhasebeHarac(muhasebeTutar);// muhasebeci parası yatırılıyor
+            string topMesaj = "Toplamda " + miktar2.ToString() + " " + urunbirimi + " " + urunname + " Aldınız Toplam Fiyat: " + toplamPara.ToString() + " ₺ dir + Muhasebeci Komisyonu icinde Kesilecek tutar : " + muhasebeTutar.ToString()+ " ₺ dir. \n\n";
             string bottomMessage = "Paralar tek tek satıcıların hesabına geçmiştir Teşekürler";
             MessageBox.Show(topMesaj + mesaj + "\n\n" + bottomMessage, "Satin Alma Basarili");
             CloseConnection();
@@ -429,14 +445,14 @@ namespace borsaProjesi
             AddOrUpdateDatabase(sorgu);
             CloseConnection();
         }
-        public void GecicibakiyeGuncelle(int gecicibakiye,string kullaniciParaBirimi)
+        public void GecicibakiyeGuncelle(double gecicibakiye,string kullaniciParaBirimi)
         {
             string sorgu = ("update Users set geciciBakiye='" + gecicibakiye + "' ,bakiyeOnay='" + "Onaylanmadı" + "', yuklemekistedigiparabirimi='"+kullaniciParaBirimi+"',sonparayuklemetarihi='"+ DateTime.Parse(DateTime.Now.ToShortDateString()).ToShortDateString()+"' where UserName='" + Singleton.Instance.currentUser.UserName + "'");
             AccessUpdateIslemleri(sorgu);
             MessageBox.Show("Bakiye yükleme işlemi tamamlandı,admin onayı bekleniyor");
             Refresh();
         }
-        public void BakiyeOnay(string username, int guncelbakiye)
+        public void BakiyeOnay(string username, double guncelbakiye)
         {
             string sorgu = ("update Users set geciciBakiye='" + 0 + "' ,hesapBakiye='" + guncelbakiye + "',bakiyeOnay='" + "Onaylandı" + "' where UserName='" + username + "'");
             AccessUpdateIslemleri(sorgu);
@@ -461,11 +477,11 @@ namespace borsaProjesi
         }
 
         // urun satin alma işlemi burda yapılıyor
-        public void UrunSatinAl(string barkodno, string urunsatici, int kacadet, int toplamfiyat, string mesaj)
+        public void UrunSatinAl(string barkodno, string urunsatici, int kacadet, double toplamfiyat, string mesaj,double muhasebeciTutar)
         {
             // işlem 1 para hesaptan çekiliyor
             OpenConnection();
-             ParaCek(toplamfiyat);
+             ParaCek(toplamfiyat+muhasebeciTutar);
             CloseConnection();
 
             //işlem 2 para satıcın hesabına geçiyor
@@ -474,7 +490,7 @@ namespace borsaProjesi
             ReadUserData = ReadDatabase("Select * from Users WHERE UserName='" + urunsatici + "'");
             if (ReadUserData.Read())
             {
-                int newBakiye = Convert.ToInt32(ReadUserData["hesapBakiye"].ToString());
+                double newBakiye = Convert.ToInt32(ReadUserData["hesapBakiye"].ToString());
                 newBakiye += toplamfiyat;
                 AddOrUpdateDatabase("update Users set hesapBakiye='" + newBakiye + "' where UserName='" + urunsatici + "'");           
             }

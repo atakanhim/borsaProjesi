@@ -40,7 +40,22 @@ namespace borsaProjesi.FormScreens
         }
         private void Siparis_ver_btn_Click(object sender, EventArgs e)
         {
-            Singleton.Instance.islem.SiparisControl(urun_adi_txt.Text, kacadet_txt.Text, kactl_txt.Text);
+          
+            try
+            {
+                double toplamtutar = Convert.ToDouble(kacadet_txt.Text) * Convert.ToDouble(kactl_txt.Text);
+                double muhasebeciParasi = toplamtutar / 100;
+                double olmasiGerekenBakiye = toplamtutar + muhasebeciParasi;
+
+                if (olmasiGerekenBakiye <= Singleton.Instance.currentUser.Bakiye)
+                    Singleton.Instance.islem.SiparisControl(urun_adi_txt.Text, kacadet_txt.Text, kactl_txt.Text);
+                else
+                    MessageBox.Show("Bakiye Yetersiz");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Hata: "+ex.ToString());
+            }         
             TxtBoxTemizle();
         }
 
