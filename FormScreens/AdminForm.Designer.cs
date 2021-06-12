@@ -140,7 +140,7 @@ namespace borsaProjesi
             this.kullanici_tabpage.Controls.Add(this.Kullanicilar_datagridview);
             this.kullanici_tabpage.Location = new System.Drawing.Point(4, 24);
             this.kullanici_tabpage.Name = "kullanici_tabpage";
-            this.kullanici_tabpage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.kullanici_tabpage.Padding = new System.Windows.Forms.Padding(3);
             this.kullanici_tabpage.Size = new System.Drawing.Size(1408, 557);
             this.kullanici_tabpage.TabIndex = 0;
             this.kullanici_tabpage.Text = "Kullanıcı Kontrol";
@@ -341,15 +341,16 @@ namespace borsaProjesi
             // bakiyeonay_label
             // 
             this.bakiyeonay_label.AutoSize = true;
-            this.bakiyeonay_label.Location = new System.Drawing.Point(416, 148);
+            this.bakiyeonay_label.Location = new System.Drawing.Point(427, 150);
             this.bakiyeonay_label.Name = "bakiyeonay_label";
-            this.bakiyeonay_label.Size = new System.Drawing.Size(0, 15);
+            this.bakiyeonay_label.Size = new System.Drawing.Size(12, 15);
             this.bakiyeonay_label.TabIndex = 39;
+            this.bakiyeonay_label.Text = "x";
             // 
             // bakiyeonaybaslik
             // 
             this.bakiyeonaybaslik.AutoSize = true;
-            this.bakiyeonaybaslik.Location = new System.Drawing.Point(335, 148);
+            this.bakiyeonaybaslik.Location = new System.Drawing.Point(332, 149);
             this.bakiyeonaybaslik.Name = "bakiyeonaybaslik";
             this.bakiyeonaybaslik.Size = new System.Drawing.Size(80, 15);
             this.bakiyeonaybaslik.TabIndex = 39;
@@ -366,7 +367,7 @@ namespace borsaProjesi
             this.exchange_rate_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exchange_rate_btn.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.exchange_rate_btn.ForeColor = System.Drawing.SystemColors.Info;
-            this.exchange_rate_btn.Location = new System.Drawing.Point(768, 30);
+            this.exchange_rate_btn.Location = new System.Drawing.Point(805, 33);
             this.exchange_rate_btn.Name = "exchange_rate_btn";
             this.exchange_rate_btn.Size = new System.Drawing.Size(146, 55);
             this.exchange_rate_btn.TabIndex = 36;
@@ -386,7 +387,7 @@ namespace borsaProjesi
             this.onayla_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.onayla_btn.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.onayla_btn.ForeColor = System.Drawing.SystemColors.Info;
-            this.onayla_btn.Location = new System.Drawing.Point(501, 126);
+            this.onayla_btn.Location = new System.Drawing.Point(507, 130);
             this.onayla_btn.Name = "onayla_btn";
             this.onayla_btn.Size = new System.Drawing.Size(146, 55);
             this.onayla_btn.TabIndex = 36;
@@ -397,32 +398,34 @@ namespace borsaProjesi
             // parabirimi_label
             // 
             this.parabirimi_label.AutoSize = true;
-            this.parabirimi_label.Location = new System.Drawing.Point(416, 108);
+            this.parabirimi_label.Location = new System.Drawing.Point(725, 23);
             this.parabirimi_label.Name = "parabirimi_label";
-            this.parabirimi_label.Size = new System.Drawing.Size(0, 15);
+            this.parabirimi_label.Size = new System.Drawing.Size(12, 15);
             this.parabirimi_label.TabIndex = 27;
+            this.parabirimi_label.Text = "x";
             // 
             // parabirimibaslik
             // 
             this.parabirimibaslik.AutoSize = true;
-            this.parabirimibaslik.Location = new System.Drawing.Point(666, 3);
+            this.parabirimibaslik.Location = new System.Drawing.Point(549, 23);
             this.parabirimibaslik.Name = "parabirimibaslik";
-            this.parabirimibaslik.Size = new System.Drawing.Size(153, 15);
+            this.parabirimibaslik.Size = new System.Drawing.Size(156, 15);
             this.parabirimibaslik.TabIndex = 27;
-            this.parabirimibaslik.Text = "Yüklemek istediği para birimi :";
+            this.parabirimibaslik.Text = "Yüklemek istediği para birimi  :";
             // 
             // gecicibakiye_label
             // 
             this.gecicibakiye_label.AutoSize = true;
-            this.gecicibakiye_label.Location = new System.Drawing.Point(416, 73);
+            this.gecicibakiye_label.Location = new System.Drawing.Point(427, 108);
             this.gecicibakiye_label.Name = "gecicibakiye_label";
-            this.gecicibakiye_label.Size = new System.Drawing.Size(0, 15);
+            this.gecicibakiye_label.Size = new System.Drawing.Size(12, 15);
             this.gecicibakiye_label.TabIndex = 27;
+            this.gecicibakiye_label.Text = "x";
             // 
             // gecicibakiyebaslik
             // 
             this.gecicibakiyebaslik.AutoSize = true;
-            this.gecicibakiyebaslik.Location = new System.Drawing.Point(295, 108);
+            this.gecicibakiyebaslik.Location = new System.Drawing.Point(279, 108);
             this.gecicibakiyebaslik.Name = "gecicibakiyebaslik";
             this.gecicibakiyebaslik.Size = new System.Drawing.Size(133, 15);
             this.gecicibakiyebaslik.TabIndex = 27;
@@ -431,15 +434,16 @@ namespace borsaProjesi
             // hesapbakiyelabel
             // 
             this.hesapbakiyelabel.AutoSize = true;
-            this.hesapbakiyelabel.Location = new System.Drawing.Point(822, 3);
+            this.hesapbakiyelabel.Location = new System.Drawing.Point(427, 73);
             this.hesapbakiyelabel.Name = "hesapbakiyelabel";
-            this.hesapbakiyelabel.Size = new System.Drawing.Size(0, 15);
+            this.hesapbakiyelabel.Size = new System.Drawing.Size(12, 15);
             this.hesapbakiyelabel.TabIndex = 26;
+            this.hesapbakiyelabel.Text = "x";
             // 
             // hesapbakiyebaslik
             // 
             this.hesapbakiyebaslik.AutoSize = true;
-            this.hesapbakiyebaslik.Location = new System.Drawing.Point(328, 69);
+            this.hesapbakiyebaslik.Location = new System.Drawing.Point(323, 73);
             this.hesapbakiyebaslik.Name = "hesapbakiyebaslik";
             this.hesapbakiyebaslik.Size = new System.Drawing.Size(89, 15);
             this.hesapbakiyebaslik.TabIndex = 26;
@@ -553,7 +557,7 @@ namespace borsaProjesi
             this.uruns_tabpage.Controls.Add(this.Urunler_datagridview);
             this.uruns_tabpage.Location = new System.Drawing.Point(4, 24);
             this.uruns_tabpage.Name = "uruns_tabpage";
-            this.uruns_tabpage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.uruns_tabpage.Padding = new System.Windows.Forms.Padding(3);
             this.uruns_tabpage.Size = new System.Drawing.Size(1408, 557);
             this.uruns_tabpage.TabIndex = 1;
             this.uruns_tabpage.Text = "Ürün Kontrol";

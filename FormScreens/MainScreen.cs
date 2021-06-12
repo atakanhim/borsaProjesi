@@ -78,11 +78,11 @@ namespace borsaProjesi
 
             //***********
             main_ad.Text = Singleton.Instance.currentUser.Ad;
-            main_soyad.Text = Singleton.Instance.currentUser.SoyAd + "";
-            bakiye_label.Text = Singleton.Instance.currentUser.Bakiye + "₺";
-            geciciBakiye_label.Text = Singleton.Instance.currentUser.GeciciBakiye + "₺";
-            bakiyelabel2_txt.Text = Singleton.Instance.currentUser.Bakiye + "₺"; ;
-            gecicibakiye2label_txt.Text = Singleton.Instance.currentUser.GeciciBakiye + "₺";
+            main_soyad.Text = Singleton.Instance.currentUser.SoyAd;
+            bakiye_label.Text = Singleton.Instance.currentUser.Bakiye + " ₺";
+            geciciBakiye_label.Text = Singleton.Instance.currentUser.GeciciBakiye +" "+ Singleton.Instance.currentUser.ParaBirimi;
+            bakiyelabel2_txt.Text = bakiye_label.Text;
+            gecicibakiye2label_txt.Text = geciciBakiye_label.Text;
             kacadetalmak_txt.Text = "";
             // güncel tarihler
           

@@ -22,6 +22,7 @@ namespace borsaProjesi
         public double GeciciBakiye { get; set; }
         public string BakiyeOnay { get; set; }
         public string Cinsiyet { get; set; }
+        public string ParaBirimi { get; set; }
 
         public CurrentUser()
         {

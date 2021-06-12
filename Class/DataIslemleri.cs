@@ -304,13 +304,13 @@ namespace borsaProjesi
             Singleton.Instance.currentUser.Adres = ReadUser["adres"].ToString();
             Singleton.Instance.currentUser.Eposta = ReadUser["email"].ToString();
             Singleton.Instance.currentUser.Unvan = ReadUser["unvan"].ToString();
-
             Singleton.Instance.currentUser.BakiyeOnay = ReadUser["bakiyeOnay"].ToString();
             Singleton.Instance.currentUser.Tc = Convert.ToInt64(ReadUser["tcno"].ToString());
             Singleton.Instance.currentUser.Telefon = Convert.ToInt64(ReadUser["telefonno"].ToString());
             Singleton.Instance.currentUser.Bakiye = Convert.ToDouble(ReadUser["hesapBakiye"].ToString());
             Singleton.Instance.currentUser.GeciciBakiye = Convert.ToDouble(ReadUser["geciciBakiye"].ToString());
             Singleton.Instance.currentUser.Cinsiyet = ReadUser["cinsiyet"].ToString();
+            Singleton.Instance.currentUser.ParaBirimi = ReadUser["yuklemekistedigiparabirimi"].ToString();
         }
         // Deggistirilen bilgiler tekrar update ediliyor
         public void Refresh()
