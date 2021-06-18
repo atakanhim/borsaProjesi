@@ -27,7 +27,8 @@ Bu arada dikkat çeken şey kullanıcı eger müşteri ise tüm onaylanmış sat
 görebilir fakat kullanıcı eğer satıcılardan biri ise o kişi kendi satışını listeliyemez veya 
 alamaz otomatik fiyatlandırma dışında kalır kalan satıcılar arasından en düşük 
 fiyattan almaya başlar.*<br/>
-
+# **Scrum Table**
+![scrumTable](https://user-images.githubusercontent.com/52455771/122578002-1ef6ee00-d05c-11eb-83b4-6827244608b9.png)<br/>
 # **User Storys**
 ## User Story 1 ( Kullanıcı Ekleme )
 ![user_story_1(kullanici üye olll)](https://user-images.githubusercontent.com/52455771/118190032-3afae480-b44b-11eb-92a5-ac14698edd10.png)<br/>
