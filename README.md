@@ -40,8 +40,7 @@ ilk önce siparişlere bakılır eger varsa alınır ve kullanıcı bir sonraki 
 Bir başka eklentimiz olan yaptıgımız alışları veya satışları veya her 2 sinide listeleyip raporlayabildigimiz 
 ekrandır bu ekranda kullanıcı yaptıgı alış veya satışları listeleyip excel türünde rapor alabilir.<br/>
 Bir diger eklentimiz alıcımız bundan önce sisteme para yüklerken sadece tl yükleyebiliyordu şimdi ise 5 farklı para birimi yükleyebiliyor<br/>
-Son eklentimiz ise muhasebeci kullanıcınsa gidicek olan işlem payı, Kullanıcılar her satın alma işlemi gerçekleştiriginde toplam paranın 1% kadar bir işlem payı kesilecek olup bu pay kullanıcdan tahsil edilecektir.
-*<br/><br/>
+Son eklentimiz ise muhasebeci kullanıcınsa gidicek olan işlem payı, Kullanıcılar her satın alma işlemi gerçekleştiriginde toplam paranın 1% kadar bir işlem payı kesilecek olup bu pay kullanıcdan tahsil edilecektir.*<br/><br/>
 # Scrum Table
 ![scrumTable](https://user-images.githubusercontent.com/52455771/122578002-1ef6ee00-d05c-11eb-83b4-6827244608b9.png)<br/>
 # User Storys
