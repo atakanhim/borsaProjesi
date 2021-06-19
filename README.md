@@ -56,3 +56,12 @@ Son eklentimiz ise muhasebeci kullanıcınsa gidicek olan işlem payı, Kullanı
 ![user_story_3 2(bakiye onaylama)](https://user-images.githubusercontent.com/52455771/118190051-3e8e6b80-b44b-11eb-8a74-53e8683bd676.png)<br/>
 ## User Story 4 ( Otomatik Satış İşlemi ) 
 ![user_story_4(satin alma gerceklesti)](https://user-images.githubusercontent.com/52455771/118190053-3fbf9880-b44b-11eb-993f-77797f1a569c.png)<br/>
+## User Story 5 ( Siparis Verme )
+![Story-5](https://user-images.githubusercontent.com/52455771/122646083-28e52380-d126-11eb-87b3-7cc9a64336c3.png)<br/>
+## User Story 6 ( Listeleme-Rapor Yazdırna )
+![Story-6](https://user-images.githubusercontent.com/52455771/122646084-297dba00-d126-11eb-8b25-e3009f089d7d.png)<br/>
+## User Story 7 ( Doviz-Bakiye-ekleme )
+![Story-7](https://user-images.githubusercontent.com/52455771/122646085-2a165080-d126-11eb-80eb-24249412d024.png)<br/>
+## User Story 8 ( Muhasebeci Parasi Kesme ) 
+![Story-8](https://user-images.githubusercontent.com/52455771/122646086-2a165080-d126-11eb-8603-06710dd36893.png)<br/>
+
