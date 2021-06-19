@@ -215,10 +215,13 @@ namespace borsaProjesi
                     xml.Load(url);
                     DateTime tarih = Convert.ToDateTime(xml.SelectSingleNode("//Tarih_Date").Attributes["Tarih"].Value);
                     string conversionRate = xml.SelectSingleNode("Tarih_Date/Currency [@Kod='"+ parabirimi_label.Text +"']/BanknoteSelling").InnerXml;
+
                     // ardından yeni gecicibakiyeyiolusturuyoruz
+
                     double onayBekleyenHesapBakiyesi = Convert.ToDouble(gecicibakiye_label.Text);       
                     double virgulluakiye = onayBekleyenHesapBakiyesi * Convert.ToDouble(conversionRate.Replace(".",","));
                     double newBekleyenBakiye = Math.Round(virgulluakiye, 2);
+
                     // veri tabanından degistiriyoruz verileri
                     Singleton.Instance.islem.GeciciBakiyeDegistirWithUsurname(username_txt.Text, newBekleyenBakiye);                  
                     MessageBox.Show(tarih.ToShortDateString() + " Tarihindeki kur bilgilerine göre paranız  donusturuldu .\n\n"+ onayBekleyenHesapBakiyesi.ToString()+" "+ parabirimi_label.Text +" --> "+newBekleyenBakiye.ToString()+" TL ." );

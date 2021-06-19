@@ -271,7 +271,7 @@ namespace borsaProjesi
             }
             else
             {
-                if (Singleton.Instance.currentUser.BakiyeOnay == "Onaylanmadı")
+                if (Singleton.Instance.currentUser.BakiyeOnay == "Onaylandı")
                 {
                     Singleton.Instance.islem.GecicibakiyeGuncelle(Convert.ToInt32(bakiyeekle_ext.Text),Parabirimleri_combo.Text);
                     ParabirimiComboDoldur();

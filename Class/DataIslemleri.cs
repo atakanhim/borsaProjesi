@@ -72,9 +72,8 @@ namespace borsaProjesi
             CloseConnection();
             NoLoadRefresh();
         }
-        //adamın hesabında para varmı ona bakılyır 
+        
     
-             //   int siparisDegeri = Convert.ToInt32(ReadSiparislerData["KacParayaAlacak"].ToString()) * Convert.ToInt32(ReadSiparislerData["KacAdetAlacak"].ToString());
         // **************************************************************---FONKSIYONLAR---**************************************************************
         // form içindeki texboxları temizliyen mühendislik harikası kod
         public void Temizle(Control ctr)

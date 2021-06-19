@@ -54,7 +54,7 @@ namespace borsaProjesi.FormScreens
 
         private void Herikiside_btn_Click(object sender, EventArgs e)
         {
-            string sorgu = "SELECT * FROM ShowSatislarTable WHERE SatisTarihi between @p1 and @p2  and SatisYapan='" + Singleton.Instance.currentUser.UserName + "' or SatinAlan='" + Singleton.Instance.currentUser.UserName + "'";
+            string sorgu = "SELECT * FROM ShowSatislarTable WHERE SatisTarihi between @p1 and @p2 And SatinAlan='" + Singleton.Instance.currentUser.UserName + "' or SatisYapan='" + Singleton.Instance.currentUser.UserName + "'";
             Listele(sorgu);
         }
 
