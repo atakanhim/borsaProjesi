@@ -4,6 +4,7 @@
 *Atakan Him - 182805004 - II.Ogretim*<br/>
 ## **Youtube Videosu**
  [Borsa Projem Youtube Videosu](https://www.youtube.com/watch?v=VnqjoPU8pjY)<br/>
+ [Borsa Projem Youtube Videosu -2](https://youtu.be/JhBbMPmNFXU)<br/>
 ## **Proje Açıklaması**
  *C# ve Access database kullanılmış  Otomatik Alım Satın Yapabilen,Admin Onayı,Urun; ekle,güncelle,kullanıcı ekle, güncelle gibi seçenekleri bulunan Market Otomasyonu projem*<br/><br/><br/>
 ## **Proje Detaylı Açıklaması**
