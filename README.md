@@ -1,12 +1,14 @@
 # *Borsa Projesi*
 
-## **Yapanlar**
+## *Yapanlar*
 *Atakan Him - 182805004 - II.Ogretim*<br/>
-## **Youtube Videosu**
+## *Youtube Videosu*
  [Borsa Projem Youtube Videosu](https://www.youtube.com/watch?v=VnqjoPU8pjY)<br/>
-## **Proje Açıklaması**
+ [Borsa Projem Youtube Videosu -2](https://youtu.be/JhBbMPmNFXU)<br/>
+## *Proje Açıklaması*
  *C# ve Access database kullanılmış  Otomatik Alım Satın Yapabilen,Admin Onayı,Urun; ekle,güncelle,kullanıcı ekle, güncelle gibi seçenekleri bulunan Market Otomasyonu projem*<br/><br/><br/>
-## **Proje Detaylı Açıklaması**
+# *Proje Detaylı Açıklaması*
+## *User Story 5 Oncesi*
 *Projemde ilk olarak bahsetmek istedigim Singleton tasarım desenini kullandığım,bu
 desen sayesinde projemde tanımlayacağım nesneleri tek bir sayfada tanımlayıp 
 gerektiği yerlerde çağırdım.Projenin Niteliklerinden bahsedecek olursam proje de,Urun Satın Al,Urun 
@@ -26,10 +28,22 @@ almaya başlıyor ve işlem bittiginde kimden ne aldıysak parasını ona göre 
 Bu arada dikkat çeken şey kullanıcı eger müşteri ise tüm onaylanmış satışları 
 görebilir fakat kullanıcı eğer satıcılardan biri ise o kişi kendi satışını listeliyemez veya 
 alamaz otomatik fiyatlandırma dışında kalır kalan satıcılar arasından en düşük 
-fiyattan almaya başlar.*<br/>
-# **Scrum Table**
+fiyattan almaya başlar.<br/><br/><br/>*
+
+## *User Story 5 ve Sonrası*
+*User-Story-5 ile beraber projemize siparis verme işlemini gerçekleştirmiş bulunmaktayız. 
+Bu kısımda alıcı hangi üründen ne kadar alacagını ve kaç paraya alacagını siparis verir,
+ardından eger o üründen o fiyatta daha once var ise otomatik alır ve alıcıya aldıgılı söyler
+ama yok ise siparis olusturulur ve o üründen o fiyatta bir satıcı pazara urun koyarsa otomatikmen
+ilk önce siparişlere bakılır eger varsa alınır ve kullanıcı bir sonraki girişinde otomatik olarak parası 
+çekilmiş ve ürün hesabına geçmiş bulunacaktır.<br/>
+Bir başka eklentimiz olan yaptıgımız alışları veya satışları veya her 2 sinide listeleyip raporlayabildigimiz 
+ekrandır bu ekranda kullanıcı yaptıgı alış veya satışları listeleyip excel türünde rapor alabilir.<br/>
+Bir diger eklentimiz alıcımız bundan önce sisteme para yüklerken sadece tl yükleyebiliyordu şimdi ise 5 farklı para birimi yükleyebiliyor<br/>
+Son eklentimiz ise muhasebeci kullanıcınsa gidicek olan işlem payı, Kullanıcılar her satın alma işlemi gerçekleştiriginde toplam paranın 1% kadar bir işlem payı kesilecek olup bu pay kullanıcdan tahsil edilecektir.*<br/><br/>
+# Scrum Table
 ![scrumTable](https://user-images.githubusercontent.com/52455771/122578002-1ef6ee00-d05c-11eb-83b4-6827244608b9.png)<br/>
-# **User Storys**
+# User Storys
 ## User Story 1 ( Kullanıcı Ekleme )
 ![user_story_1(kullanici üye olll)](https://user-images.githubusercontent.com/52455771/118190032-3afae480-b44b-11eb-92a5-ac14698edd10.png)<br/>
 ## User Story 2.1 ( Urun Ekleme )
@@ -42,3 +56,12 @@ fiyattan almaya başlar.*<br/>
 ![user_story_3 2(bakiye onaylama)](https://user-images.githubusercontent.com/52455771/118190051-3e8e6b80-b44b-11eb-8a74-53e8683bd676.png)<br/>
 ## User Story 4 ( Otomatik Satış İşlemi ) 
 ![user_story_4(satin alma gerceklesti)](https://user-images.githubusercontent.com/52455771/118190053-3fbf9880-b44b-11eb-993f-77797f1a569c.png)<br/>
+## User Story 5 ( Siparis Verme )
+![Story-5](https://user-images.githubusercontent.com/52455771/122646083-28e52380-d126-11eb-87b3-7cc9a64336c3.png)<br/>
+## User Story 6 ( Listeleme-Rapor Yazdırna )
+![Story-6](https://user-images.githubusercontent.com/52455771/122646084-297dba00-d126-11eb-8b25-e3009f089d7d.png)<br/>
+## User Story 7 ( Doviz-Bakiye-ekleme )
+![Story-7](https://user-images.githubusercontent.com/52455771/122646085-2a165080-d126-11eb-80eb-24249412d024.png)<br/>
+## User Story 8 ( Muhasebeci Parasi Kesme ) 
+![Story-8](https://user-images.githubusercontent.com/52455771/122646086-2a165080-d126-11eb-8603-06710dd36893.png)<br/>
+
